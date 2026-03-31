@@ -1,0 +1,4041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kids Choice - Premium Kids Footwear Since 2006 | Ages 6 Months to 12 Years</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* CSS VARIABLES */
+:root {
+  --primary: #2874f0;
+  --primary-dark: #1e5bc6;
+  --secondary: #ff9f00;
+  --accent: #e74c3c;
+  --success: #26c281;
+  --dark: #172b4d;
+  --light: #f8f9fa;
+  --gray: #878787;
+  --shadow: 0 2px 10px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 40px rgba(0,0,0,0.15);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--light);
+  color: #333;
+  line-height: 1.6;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  padding: 12px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow-lg);
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.logo {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+}
+
+.logo svg {
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 10px rgba(15, 118, 110, 0.4));
+  transition: transform 0.3s ease;
+}
+
+.logo svg:hover {
+  transform: scale(1.1);
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+
+.logo-main {
+  font-size: 1.7rem;
+  color: white;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.45);
+  letter-spacing: 4px;
+  font-weight: 800;
+}
+
+.logo-tagline {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.95);
+  letter-spacing: 1.5px;
+  margin-top: 4px;
+}
+
+.logo-since {
+  font-size: 0.75rem;
+  color: #FBBF24;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 5px;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.logo i { color: var(--secondary); }
+
+/* SEARCH BAR */
+.search-bar {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 12px 20px;
+  padding-left: 45px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.search-bar input:focus { outline: 2px solid var(--secondary); }
+
+.search-bar i {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--gray);
+}
+
+.search-suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  display: none;
+  z-index: 1001;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.search-suggestions.active { display: block; }
+
+.search-suggestion {
+  padding: 12px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.search-suggestion:hover { background: #f0f0f0; }
+.search-suggestion i { color: var(--gray); }
+.search-suggestion .price { margin-left: auto; color: var(--primary); font-weight: 600; }
+
+/* HEADER ACTIONS */
+.header-actions { display: flex; align-items: center; gap: 15px; }
+
+.icon-btn {
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: white;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.icon-btn:hover { background: rgba(255,255,255,0.25); transform: scale(1.05); }
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background: var(--accent);
+  color: white;
+  font-size: 0.65rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+/* CATEGORY MENU */
+.category-menu {
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+}
+
+.category-menu-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 5px;
+}
+
+.cat-item {
+  padding: 12px 25px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--dark);
+  transition: all 0.2s;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cat-item:hover, .cat-item.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  background: #f0f7ff;
+}
+
+.cat-item i { font-size: 0.8rem; }
+
+/* HERO CAROUSEL */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, #1a5ac8 100%);
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero h1 { font-size: 2.8rem; margin-bottom: 10px; position: relative; }
+.hero p { font-size: 1.1rem; opacity: 0.9; position: relative; }
+
+/* TESTIMONIALS */
+.testimonials-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.testimonials-section h2 {
+  font-size: 1.8rem;
+  color: var(--dark);
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+  text-align: left;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.testimonial-stars {
+  color: #F59E0B;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.testimonial-text {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.testimonial-author {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* WRITE REVIEW SECTION */
+.write-review-section {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 3px solid var(--primary);
+}
+
+.write-review-section h2 {
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.review-subtitle {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.review-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.review-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(40, 116, 240, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.star {
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 0.4;
+}
+
+.star:hover,
+.star.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.star:hover ~ .star {
+  opacity: 1;
+}
+
+.star.active {
+  animation: starPop 0.3s ease;
+}
+
+@keyframes starPop {
+  0% { transform: scale(1.2); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1.2); }
+}
+
+.rating-text {
+  color: #888;
+  font-size: 0.85rem;
+  margin-left: 10px;
+}
+
+.submit-review-btn {
+  width: 100%;
+  padding: 14px 25px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.submit-review-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(40, 116, 240, 0.35);
+}
+
+.submit-review-btn i {
+  font-size: 1.1rem;
+}
+
+.review-success {
+  text-align: center;
+  padding: 30px;
+}
+
+.review-success i {
+  font-size: 4rem;
+  color: #26c281;
+  margin-bottom: 15px;
+}
+
+.review-success h3 {
+  color: var(--dark);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.review-success p {
+  color: #666;
+}
+
+/* PRODUCTS SECTION */
+.products-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* FILTER BAR */
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.filter-left { display: flex; gap: 10px; align-items: center; }
+
+.filter-btn {
+  padding: 8px 18px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.85rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.filter-btn:hover, .filter-btn.active {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: #f0f7ff;
+}
+
+.filter-right { display: flex; gap: 10px; align-items: center; }
+
+.sort-select {
+  padding: 8px 15px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: white;
+}
+
+.sort-select:focus { outline: none; border-color: var(--primary); }
+
+/* SECTION TITLE */
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title i { color: var(--primary); }
+
+/* PRODUCTS GRID */
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* PREMIUM PRODUCT CARD */
+.product {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: all 0.3s;
+  position: relative;
+}
+
+.product:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.product-badges {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 5;
+}
+
+.badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.badge-bestseller { background: var(--secondary); color: white; }
+.badge-new { background: var(--success); color: white; }
+.badge-sale { background: var(--accent); color: white; }
+
+.product-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  background: #f5f5f5;
+  position: relative;
+}
+
+.wishlist-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 36px;
+  height: 36px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--gray);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  transition: all 0.2s;
+  z-index: 5;
+}
+
+.wishlist-btn:hover { color: var(--accent); transform: scale(1.1); }
+.wishlist-btn.active { color: var(--accent); }
+
+.product-info { padding: 15px; }
+
+.product-name {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: var(--dark);
+  line-height: 1.3;
+}
+
+.product-category {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin-bottom: 8px;
+}
+
+/* STAR RATING */
+.stars {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  margin-bottom: 8px;
+}
+
+.stars i { font-size: 0.75rem; }
+.stars i.filled { color: var(--secondary); }
+.stars i.empty { color: #ddd; }
+.rating-text { font-size: 0.75rem; color: var(--gray); margin-left: 5px; }
+
+/* PRICE */
+.price-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.price-current { font-size: 1.25rem; font-weight: 700; color: var(--dark); }
+.price-original { font-size: 0.9rem; color: var(--gray); text-decoration: line-through; }
+.price-discount { font-size: 0.8rem; color: var(--success); font-weight: 600; }
+
+/* COLOR SWATCHES */
+.color-swatches {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.color-swatch {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid #e0e0e0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.color-swatch:hover, .color-swatch.selected {
+  border-color: var(--primary);
+  transform: scale(1.15);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.product-actions { display: flex; gap: 8px; }
+
+.btn {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.btn-primary:hover { background: var(--primary-dark); }
+
+.btn-outline {
+  background: white;
+  border: 1px solid #ddd;
+  color: var(--dark);
+}
+
+.btn-outline:hover { border-color: var(--primary); color: var(--primary); }
+
+/* PDP MODAL */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal-overlay.active { display: flex; }
+
+.pdp-modal {
+  background: white;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 950px;
+  max-height: 90vh;
+  overflow-y: auto;
+  display: flex;
+  position: relative;
+}
+
+.pdp-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  color: #666;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  z-index: 10;
+  transition: all 0.2s;
+}
+
+.pdp-close:hover { background: #f0f0f0; color: var(--dark); }
+
+.pdp-gallery {
+  flex: 1;
+  background: #f8f8f8;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 350px;
+}
+
+.pdp-main-image {
+  width: 100%;
+  max-width: 300px;
+  height: 280px;
+  object-fit: contain;
+  margin-bottom: 20px;
+}
+
+.pdp-thumbnails {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.pdp-thumb {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.pdp-thumb:hover, .pdp-thumb.active {
+  border-color: var(--primary);
+}
+
+.pdp-details {
+  flex: 1;
+  padding: 30px;
+}
+
+.pdp-badges { display: flex; gap: 8px; margin-bottom: 10px; }
+
+.pdp-title { font-size: 1.5rem; font-weight: 700; color: var(--dark); margin-bottom: 8px; }
+
+.pdp-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.pdp-rating .stars i { font-size: 1rem; }
+.pdp-rating-count { font-size: 0.85rem; color: var(--gray); }
+
+.pdp-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.pdp-price { font-size: 2rem; font-weight: 700; color: var(--dark); }
+.pdp-original { font-size: 1.2rem; color: var(--gray); text-decoration: line-through; }
+.pdp-discount { font-size: 1rem; color: var(--success); font-weight: 600; }
+
+.pdp-description { color: #666; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.6; }
+
+.pdp-section { margin-bottom: 20px; }
+
+.pdp-section h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 10px;
+}
+
+/* COLOR SELECTION */
+.color-options { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.color-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.color-option:hover, .color-option.selected {
+  border-color: var(--primary);
+  background: #f0f7ff;
+}
+
+.color-option .swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+.color-option span { font-size: 0.85rem; font-weight: 500; }
+
+/* SIZE SELECTION */
+.size-options { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.size-option {
+  padding: 10px 20px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.size-option:hover, .size-option.selected {
+  border-color: var(--primary);
+  background: #f0f7ff;
+  color: var(--primary);
+}
+
+/* QUANTITY */
+.qty-selector {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.qty-btn {
+  width: 36px;
+  height: 36px;
+  border: 2px solid #e0e0e0;
+  background: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.qty-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+.qty-value { font-size: 1.1rem; font-weight: 600; min-width: 30px; text-align: center; }
+
+/* PDP ACTIONS */
+.pdp-actions { display: flex; gap: 10px; margin-top: 25px; }
+
+.pdp-actions .btn { padding: 14px 24px; font-size: 1rem; }
+
+/* PDP SPECS */
+.pdp-specs {
+  background: #f8f8f8;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.spec-row:last-child { border-bottom: none; }
+.spec-label { color: var(--gray); font-size: 0.85rem; }
+.spec-value { color: var(--dark); font-weight: 500; font-size: 0.85rem; }
+
+/* CART SIDEBAR */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.overlay.active { opacity: 1; visibility: visible; }
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -450px;
+  width: 430px;
+  max-width: 95vw;
+  height: 100%;
+  background: white;
+  z-index: 1999;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar.active { right: 0; }
+
+.sidebar-header {
+  padding: 20px 25px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-header h3 { font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+
+.close-btn {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.close-btn:hover { background: rgba(255,255,255,0.3); }
+
+.cart-items {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 25px;
+}
+
+.cart-item {
+  display: flex;
+  gap: 15px;
+  padding: 15px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.cart-item-img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+  background: #f5f5f5;
+}
+
+.cart-item-details { flex: 1; }
+
+.cart-item-name { font-weight: 600; margin-bottom: 4px; color: var(--dark); }
+.cart-item-price { color: var(--primary); font-weight: 600; }
+.cart-item-options { font-size: 0.75rem; color: var(--gray); margin-top: 4px; }
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.qty-btn-sm {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.qty-btn-sm:hover { border-color: var(--primary); color: var(--primary); }
+
+.remove-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+  align-self: flex-start;
+}
+
+.remove-btn:hover { color: var(--accent); }
+
+/* CART FOOTER */
+.cart-footer {
+  padding: 20px 25px;
+  border-top: 2px solid #eee;
+  background: #fafafa;
+}
+
+/* COUPON */
+.coupon-section { margin-bottom: 15px; }
+
+.coupon-row {
+  display: flex;
+  gap: 10px;
+}
+
+.coupon-input {
+  flex: 1;
+  padding: 10px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+}
+
+.coupon-input:focus { outline: none; border-color: var(--primary); }
+
+.apply-btn {
+  padding: 10px 20px;
+  background: var(--dark);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.apply-btn:hover { background: #0f1629; }
+
+.coupon-applied {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e8f5e9;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.coupon-applied i { color: var(--success); }
+.coupon-applied .remove-coupon { color: var(--gray); cursor: pointer; font-size: 0.9rem; }
+
+/* PRICE BREAKDOWN */
+.price-breakdown { margin-bottom: 15px; }
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 0.9rem;
+}
+
+.price-row.total {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--dark);
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  margin-top: 5px;
+}
+
+.price-row .discount { color: var(--success); }
+
+.free-delivery {
+  background: #e8f5e9;
+  color: var(--success);
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.checkout-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.checkout-btn:hover { transform: scale(1.02); box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3); }
+
+/* WISHLIST SIDEBAR */
+.wishlist-sidebar { background: #fff5f5; }
+.wishlist-sidebar .sidebar-header { background: linear-gradient(135deg, var(--accent), #c0392b); }
+
+/* EMPTY STATE */
+.empty-state {
+  text-align: center;
+  padding: 50px 20px;
+  color: var(--gray);
+}
+
+.empty-state i { font-size: 4rem; margin-bottom: 15px; opacity: 0.3; }
+.empty-state h3 { font-size: 1.2rem; margin-bottom: 8px; color: var(--dark); }
+.empty-state p { font-size: 0.9rem; }
+
+/* LOGIN MODAL */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s;
+}
+
+.modal.active { opacity: 1; visibility: visible; }
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 400px;
+  max-width: 90vw;
+  transform: scale(0.9);
+  transition: all 0.3s;
+}
+
+.modal.active .modal-content { transform: scale(1); }
+
+.modal-content h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.3s;
+}
+
+.modal-content input:focus { outline: none; border-color: var(--primary); }
+
+.modal-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s;
+}
+
+.modal-btn:hover { transform: scale(1.02); }
+
+/* ADMIN PANEL */
+.admin-sidebar {
+  position: fixed;
+  top: 0;
+  left: -550px;
+  width: 530px;
+  max-width: 95vw;
+  height: 100%;
+  background: white;
+  z-index: 1999;
+  transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
+}
+
+.admin-sidebar.active { left: 0; }
+
+.admin-header {
+  padding: 20px 25px;
+  background: linear-gradient(135deg, var(--success), #1e8449);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.admin-header h3 { font-size: 1.2rem; display: flex; align-items: center; gap: 10px; }
+
+.admin-content { padding: 25px; }
+
+.admin-welcome {
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.admin-welcome h3 { font-size: 1.1rem; margin-bottom: 5px; }
+.admin-welcome p { font-size: 0.85rem; opacity: 0.9; }
+
+.admin-section {
+  margin-bottom: 30px;
+}
+
+.admin-section h4 {
+  font-size: 1rem;
+  margin-bottom: 15px;
+  color: var(--dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.admin-section h4 i { color: var(--primary); }
+
+.admin-form { display: flex; flex-direction: column; gap: 12px; }
+
+.admin-form input, .admin-form select, .admin-form textarea {
+  padding: 12px 15px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.2s;
+}
+
+.admin-form input:focus, .admin-form select:focus, .admin-form textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.admin-form textarea { resize: vertical; min-height: 80px; }
+
+.admin-form button {
+  padding: 14px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s;
+}
+
+.admin-form button:hover { transform: scale(1.02); }
+
+.admin-products { display: flex; flex-direction: column; gap: 12px; }
+
+.admin-product {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.admin-product:hover { background: #f0f0f0; }
+
+.admin-product img {
+  width: 55px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #e0e0e0;
+}
+
+.admin-product-info { flex: 1; }
+.admin-product-name { font-weight: 600; font-size: 0.9rem; color: var(--dark); margin-bottom: 3px; }
+.admin-product-price { color: var(--primary); font-weight: 600; font-size: 0.85rem; }
+
+.admin-product-actions { display: flex; gap: 8px; }
+
+.admin-product-actions button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.edit-btn { background: var(--primary); color: white; }
+.delete-btn { background: var(--accent); color: white; }
+.edit-btn:hover, .delete-btn:hover { transform: scale(1.05); }
+
+/* NOTIFICATIONS PANEL */
+.notifications-panel {
+  background: #fff8e1;
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.notif-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.notif-header h4 { display: flex; align-items: center; gap: 8px; color: var(--dark); }
+.notif-badge {
+  background: var(--accent);
+  color: white;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.notif-list { max-height: 200px; overflow-y: auto; }
+
+.notif-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+}
+
+.notif-item i { color: var(--primary); margin-top: 3px; }
+.notif-item .time { color: var(--gray); font-size: 0.75rem; margin-left: auto; white-space: nowrap; }
+.notif-item.order { border-left: 3px solid var(--success); }
+.notif-item.wishlist { border-left: 3px solid var(--accent); }
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: var(--dark);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight: 500;
+  z-index: 3000;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.toast.show { transform: translateX(-50%) translateY(0); }
+.toast.success { background: var(--success); }
+.toast.error { background: var(--accent); }
+
+/* AI CHATBOT */
+.chatbot-btn {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.5rem;
+  box-shadow: 0 5px 25px rgba(40, 116, 240, 0.4);
+  z-index: 998;
+  transition: all 0.3s;
+}
+
+.chatbot-btn:hover { transform: scale(1.1); }
+
+.chatbot-btn.has-unread::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.chatbot-window {
+  position: fixed;
+  bottom: 170px;
+  right: 30px;
+  width: 380px;
+  max-width: calc(100vw - 40px);
+  height: 500px;
+  max-height: calc(100vh - 200px);
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.2);
+  z-index: 999;
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.chatbot-window.active { display: flex; }
+
+.chatbot-header {
+  padding: 18px 20px;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-header h4 { display: flex; align-items: center; gap: 10px; }
+.chatbot-header h4 i { font-size: 1.2rem; }
+
+.chatbot-actions { display: flex; gap: 10px; }
+
+.chatbot-actions button {
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+}
+
+.chatbot-actions button:hover { background: rgba(255,255,255,0.3); }
+
+.chatbot-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  background: #f5f7fa;
+}
+
+.message {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.message.bot { justify-content: flex-start; }
+.message.user { justify-content: flex-end; }
+
+.message-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.bot .message-avatar { background: var(--primary); color: white; }
+.user .message-avatar { background: var(--success); color: white; }
+
+.message-content {
+  max-width: 75%;
+  padding: 12px 16px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.bot .message-content { background: white; color: var(--dark); border-bottom-left-radius: 3px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+.user .message-content { background: var(--primary); color: white; border-bottom-right-radius: 3px; }
+
+.message-time { font-size: 0.7rem; color: var(--gray); margin-top: 5px; text-align: right; }
+.user .message-time { text-align: right; }
+
+.quick-replies {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.quick-reply {
+  padding: 8px 16px;
+  background: white;
+  border: 1px solid var(--primary);
+  border-radius: 20px;
+  color: var(--primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.quick-reply:hover { background: var(--primary); color: white; }
+
+/* DARK MODE TOGGLE */
+.dark-mode-btn {
+  position: fixed;
+  bottom: 170px;
+  right: 100px;
+  width: 45px;
+  height: 45px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--dark);
+  box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+  z-index: 998;
+  transition: all 0.3s;
+}
+
+.dark-mode-btn:hover { transform: scale(1.1); }
+
+body.dark-mode {
+  background: #1a1a2e;
+  color: #e0e0e0;
+}
+
+body.dark-mode header { background: #0f0f23; }
+body.dark-mode .product { background: #252540; }
+body.dark-mode .sidebar, body.dark-mode .admin-sidebar { background: #252540; }
+body.dark-mode .filter-btn, body.dark-mode .sort-select { background: #252540; border-color: #3a3a5a; color: #e0e0e0; }
+body.dark-mode .chatbot-messages { background: #1a1a2e; }
+body.dark-mode .message.bot .message-content { background: #252540; color: #e0e0e0; }
+body.dark-mode .admin-form input, body.dark-mode .admin-form select, body.dark-mode .admin-form textarea { background: #1a1a2e; border-color: #3a3a5a; color: #e0e0e0; }
+
+/* CHAT INPUT */
+.chatbot-input-area {
+  padding: 15px;
+  background: white;
+  border-top: 1px solid #eee;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.chatbot-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 25px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  resize: none;
+}
+
+.chatbot-input:focus { outline: none; border-color: var(--primary); }
+
+.chatbot-input-area button {
+  width: 45px;
+  height: 45px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.chatbot-input-area button:hover { background: var(--primary-dark); transform: scale(1.05); }
+
+/* EMOJI PICKER */
+.emoji-picker {
+  position: absolute;
+  bottom: 70px;
+  left: 15px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+  padding: 10px;
+  display: none;
+  z-index: 1001;
+}
+
+.emoji-picker.active { display: block; }
+.emoji-picker button { background: none; border: none; font-size: 1.4rem; cursor: pointer; padding: 5px; transition: transform 0.2s; }
+.emoji-picker button:hover { transform: scale(1.2); }
+
+/* POLICIES SECTION */
+.policies {
+  background: white;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+
+.policies-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.policy-card {
+  text-align: center;
+  padding: 25px;
+}
+
+.policy-card i {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 15px;
+}
+
+.policy-card h4 { font-size: 1rem; margin-bottom: 8px; color: var(--dark); }
+.policy-card p { font-size: 0.85rem; color: var(--gray); line-height: 1.5; }
+.policy-card .policy-highlight { color: var(--success); font-weight: 600; }
+
+/* FOOTER */
+footer {
+  background: var(--dark);
+  color: white;
+  padding: 50px 20px 30px;
+}
+
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-section h4 {
+  margin-bottom: 20px;
+  color: var(--primary);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-section p {
+  color: #aaa;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-section p i { color: var(--primary); margin-top: 4px; }
+
+.payment-section {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+.payment-section h4 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.payment-section h4 i { color: var(--secondary); margin-right: 8px; }
+
+.payment-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.payment-icon {
+  background: rgba(255,255,255,0.1);
+  padding: 10px 18px;
+  border-radius: 8px;
+  color: white;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+}
+
+.payment-icon:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+
+.payment-icon i { color: var(--secondary); font-size: 1rem; }
+
+.whatsapp-order-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #25d366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 25px;
+  margin-top: 15px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-order-btn:hover {
+  background: #128c7e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.whatsapp-order-btn i { font-size: 1.2rem; }
+
+.whatsapp-comment-box {
+  margin-top: 12px;
+}
+
+.whatsapp-comment-box input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #3a3a5a;
+  border-radius: 8px;
+  background: #1a1a2e;
+  color: #ccc;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.whatsapp-comment-box input:focus {
+  outline: none;
+  border-color: #25d366;
+  background: #1e1e38;
+}
+
+.whatsapp-comment-box input::placeholder {
+  color: #666;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  margin-top: 30px;
+  border-top: 1px solid #2a2a4a;
+  color: #666;
+  font-size: 0.85rem;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366;
+  color: white;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+  z-index: 997;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.whatsapp-float:hover { transform: scale(1.1); }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .header-main { flex-wrap: wrap; gap: 15px; }
+  .search-bar { order: 3; max-width: 100%; width: 100%; }
+  .category-menu-inner { overflow-x: auto; white-space: nowrap; }
+  .hero h1 { font-size: 2rem; }
+  .pdp-modal { flex-direction: column; }
+  .pdp-gallery { min-width: auto; padding: 20px; }
+  .pdp-main-image { height: 200px; }
+  .chatbot-window { width: calc(100vw - 20px); right: 10px; bottom: 160px; }
+  .chatbot-btn { right: 20px; bottom: 90px; }
+  .whatsapp-float { width: 50px; height: 50px; font-size: 1.4rem; }
+  .dark-mode-btn { right: 80px; bottom: 170px; }
+  .filter-bar { flex-direction: column; align-items: stretch; }
+  .filter-left { overflow-x: auto; padding-bottom: 5px; }
+  .whatsapp-comment-box { margin-top: 10px; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-main">
+    <div class="logo">
+      <svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="pGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#0D9488"/>
+            <stop offset="50%" style="stop-color:#14B8A6"/>
+            <stop offset="100%" style="stop-color:#2DD4BF"/>
+          </linearGradient>
+          <linearGradient id="pGold" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#FDE68A"/>
+            <stop offset="50%" style="stop-color:#F59E0B"/>
+            <stop offset="100%" style="stop-color:#D97706"/>
+          </linearGradient>
+          <linearGradient id="pSole" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#0F766E"/>
+            <stop offset="100%" style="stop-color:#115E59"/>
+          </linearGradient>
+          <filter id="pShadow">
+            <feDropShadow dx="0" dy="3" stdDeviation="3" flood-color="#0F766E" flood-opacity="0.35"/>
+          </filter>
+          <filter id="pGlow">
+            <feGaussianBlur stdDeviation="1.5" result="blur"/>
+            <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+          </filter>
+        </defs>
+
+        <!-- Main shoe illustration -->
+        <g transform="translate(3, 8)" filter="url(#pShadow)">
+          <!-- Shoe sole -->
+          <ellipse cx="27" cy="42" rx="24" ry="8" fill="url(#pSole)"/>
+          <!-- Shoe body -->
+          <path d="M4 22 Q4 4 16 4 L36 4 Q48 4 48 22 L48 30 Q48 36 40 36 L12 36 Q4 36 4 22 Z" fill="url(#pGrad)"/>
+          <!-- Shoe opening -->
+          <ellipse cx="26" cy="6" rx="12" ry="4" fill="#0F766E"/>
+          <!-- Gold strap -->
+          <path d="M12 4 Q26 -10 40 4" fill="none" stroke="url(#pGold)" stroke-width="6" stroke-linecap="round"/>
+          <!-- Gold buckle -->
+          <rect x="22" y="-2" width="8" height="6" rx="1" fill="url(#pGold)"/>
+          <!-- Shine -->
+          <ellipse cx="16" cy="14" rx="6" ry="3" fill="white" opacity="0.5"/>
+          <!-- Heart -->
+          <path d="M26 16 Q22 12 19 16 Q16 20 19 24 Q22 28 26 23 Q30 28 33 24 Q36 20 33 16 Q30 12 26 16 Z" fill="#F43F5E"/>
+          <!-- Decorative dots -->
+          <circle cx="10" cy="28" r="2" fill="#FDE68A" opacity="0.8"/>
+          <circle cx="42" cy="28" r="2" fill="#FDE68A" opacity="0.8"/>
+        </g>
+
+        <!-- Stars - positioned around -->
+        <g filter="url(#pGlow)">
+          <polygon points="6,6 7.5,10 11,10 8,12.5 9.5,16 6,14 2.5,16 4,12.5 1,10 4.5,10" fill="url(#pGold)"/>
+          <polygon points="54,6 55.5,10 59,10 56,12.5 57.5,16 54,14 50.5,16 52,12.5 49,10 52.5,10" fill="url(#pGold)"/>
+        </g>
+        <circle cx="3" cy="32" r="2" fill="url(#pGold)" opacity="0.6"/>
+        <circle cx="57" cy="32" r="2" fill="url(#pGold)" opacity="0.6"/>
+      </svg>
+      <div class="logo-text">
+        <span class="logo-main">KIDS CHOICE</span>
+        <span class="logo-tagline">Premium Kids Footwear</span>
+        <span class="logo-since">⭐ Since 2006 ⭐</span>
+      </div>
+    </div>
+    <div class="search-bar">
+      <i class="fas fa-search"></i>
+      <input type="text" id="searchInput" placeholder="Search for shoes, sandals..." oninput="showSuggestions(this.value)" onblur="hideSuggestions()">
+      <div class="search-suggestions" id="searchSuggestions"></div>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" onclick="toggleWishlist()" title="Wishlist">
+        <i class="fas fa-heart"></i>
+        <span class="cart-count" id="wishlistCount">0</span>
+      </button>
+      <button class="icon-btn" onclick="toggleCart()" title="Cart">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn" onclick="toggleAdmin()" title="Admin">
+        <i class="fas fa-user-shield"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- CATEGORY MENU -->
+<div class="category-menu">
+  <div class="category-menu-inner">
+    <div class="cat-item active" onclick="filterProducts('all')"><i class="fas fa-th"></i> All</div>
+    <div class="cat-item" onclick="filterProducts('boys')"><i class="fas fa-mars"></i> Boys</div>
+    <div class="cat-item" onclick="filterProducts('boys-sandals')"><i class="fas fa-shoe-prints"></i> Boys Sandals</div>
+    <div class="cat-item" onclick="filterProducts('girls')"><i class="fas fa-venus"></i> Girls</div>
+    <div class="cat-item" onclick="filterProducts('girls-sandals')"><i class="fas fa-shoe-prints"></i> Girls Sandals</div>
+    <div class="cat-item" onclick="filterProducts('baby')"><i class="fas fa-baby"></i> Baby</div>
+    <div class="cat-item" onclick="filterProducts('running-slippers')"><i class="fas fa-running"></i> Running Slippers</div>
+    <div class="cat-item" onclick="filterProducts('crocs')"><i class="fas fa-cloud"></i> Crocs</div>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Little Feet, Big Dreams</h1>
+  <p>Premium Kids Footwear • Trusted Since 2006 • For Kids 6 Months to 12 Years</p>
+</section>
+
+<!-- POLICIES -->
+<div class="policies">
+  <div class="policies-inner">
+    <div class="policy-card">
+      <i class="fas fa-calendar-check"></i>
+      <h4>Since 2006</h4>
+      <p>18+ years of trusted service to 10,000+ families</p>
+    </div>
+    <div class="policy-card">
+      <i class="fas fa-child"></i>
+      <h4>Ages 6 Months to 12 Years</h4>
+      <p>Perfect fit for every stage of your child's growth</p>
+    </div>
+    <div class="policy-card">
+      <i class="fas fa-exchange-alt"></i>
+      <h4>Exchange Anytime</h4>
+      <p>No time limit! <span class="policy-highlight">Exchange or return</span> whenever you want - hassle-free!</p>
+    </div>
+    <div class="policy-card">
+      <i class="fas fa-truck"></i>
+      <h4>Free Delivery</h4>
+      <p>Free delivery on orders above ₹499</p>
+    </div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products-section">
+  <div class="filter-bar">
+    <div class="filter-left">
+      <button class="filter-btn active" onclick="filterProducts('all')">All</button>
+      <button class="filter-btn" onclick="filterProducts('boys')">Boys</button>
+      <button class="filter-btn" onclick="filterProducts('boys-sandals')">Boys Sandals</button>
+      <button class="filter-btn" onclick="filterProducts('girls')">Girls</button>
+      <button class="filter-btn" onclick="filterProducts('girls-sandals')">Girls Sandals</button>
+      <button class="filter-btn" onclick="filterProducts('baby')">Baby</button>
+      <button class="filter-btn" onclick="filterProducts('running-slippers')">Running Slippers</button>
+      <button class="filter-btn" onclick="filterProducts('crocs')">Crocs</button>
+    </div>
+    <div class="filter-right">
+      <select class="sort-select" onchange="sortProducts(this.value)">
+        <option value="default">Sort by: Default</option>
+        <option value="price-low">Price: Low to High</option>
+        <option value="price-high">Price: High to Low</option>
+        <option value="name">Name: A-Z</option>
+        <option value="rating">Rating</option>
+      </select>
+    </div>
+  </div>
+
+  <h2 class="section-title"><i class="fas fa-fire"></i> Our Collection</h2>
+  <div class="products" id="products"></div>
+</section>
+
+<!-- CART SIDEBAR -->
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<div class="sidebar" id="cartSidebar">
+  <div class="sidebar-header">
+    <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+    <button class="close-btn" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="cart-footer">
+    <div class="coupon-section">
+      <div class="coupon-row">
+        <input type="text" class="coupon-input" id="couponInput" placeholder="Enter coupon code">
+        <button class="apply-btn" onclick="applyCoupon()">Apply</button>
+      </div>
+      <div id="couponApplied"></div>
+    </div>
+    <div id="freeDeliveryMsg" class="free-delivery" style="display:none;">
+      <i class="fas fa-truck"></i> You are eligible for FREE delivery!
+    </div>
+    <div class="price-breakdown" id="priceBreakdown"></div>
+    <button class="checkout-btn" onclick="placeOrder()">
+      <i class="fab fa-whatsapp"></i> Order via WhatsApp
+    </button>
+  </div>
+</div>
+
+<!-- WISHLIST SIDEBAR -->
+<div class="overlay" id="wishlistOverlay" onclick="toggleWishlist()"></div>
+<div class="sidebar wishlist-sidebar" id="wishlistSidebar">
+  <div class="sidebar-header">
+    <h3><i class="fas fa-heart"></i> Wishlist</h3>
+    <button class="close-btn" onclick="toggleWishlist()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="cart-items" id="wishlistItems"></div>
+</div>
+
+<!-- PDP MODAL -->
+<div class="modal-overlay" id="pdpModal">
+  <div class="pdp-modal">
+    <button class="pdp-close" onclick="closePDP()"><i class="fas fa-times"></i></button>
+    <div class="pdp-gallery">
+      <img src="" alt="" class="pdp-main-image" id="pdpImage">
+      <div class="pdp-thumbnails" id="pdpThumbs"></div>
+    </div>
+    <div class="pdp-details">
+      <div class="pdp-badges" id="pdpBadges"></div>
+      <h2 class="pdp-title" id="pdpTitle"></h2>
+      <div class="pdp-rating" id="pdpRating"></div>
+      <div class="pdp-price-row">
+        <span class="pdp-price" id="pdpPrice"></span>
+        <span class="pdp-original" id="pdpOriginal"></span>
+        <span class="pdp-discount" id="pdpDiscount"></span>
+      </div>
+      <p class="pdp-description" id="pdpDescription"></p>
+      <div class="pdp-section">
+        <h4>Color</h4>
+        <div class="color-options" id="pdpColors"></div>
+      </div>
+      <div class="pdp-section">
+        <h4>Size</h4>
+        <div class="size-options" id="pdpSizes"></div>
+      </div>
+      <div class="pdp-section">
+        <h4>Quantity</h4>
+        <div class="qty-selector">
+          <button class="qty-btn" onclick="changePdpQty(-1)">-</button>
+          <span class="qty-value" id="pdpQty">1</span>
+          <button class="qty-btn" onclick="changePdpQty(1)">+</button>
+        </div>
+      </div>
+      <div class="pdp-actions">
+        <button class="btn btn-primary" onclick="addToCartFromPDP()"><i class="fas fa-cart-plus"></i> Add to Cart</button>
+        <button class="btn btn-outline" onclick="toggleWishlistFromPDP()"><i class="fas fa-heart"></i></button>
+      </div>
+      <div class="pdp-specs" id="pdpSpecs"></div>
+    </div>
+  </div>
+</div>
+
+<!-- LOGIN MODAL -->
+<div class="modal" id="loginModal">
+  <div class="modal-content">
+    <h2><i class="fas fa-user-shield"></i> Admin Login</h2>
+    <input type="password" id="password" placeholder="Enter Password">
+    <button class="modal-btn" onclick="login()">Login</button>
+    <p style="text-align:center;margin-top:15px;color:#999;font-size:0.85rem;">Contact Ibrahim Narmawala for access</p>
+  </div>
+</div>
+
+<!-- ADMIN SIDEBAR -->
+<div class="overlay" id="adminOverlay" onclick="toggleAdmin()"></div>
+<div class="admin-sidebar" id="adminSidebar">
+  <div class="admin-header">
+    <h3><i class="fas fa-cog"></i> Admin Panel</h3>
+    <button class="close-btn" onclick="toggleAdmin()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="admin-content">
+    <div class="admin-welcome">
+      <h3>Welcome, Ibrahim Narmawala</h3>
+      <p>Manage your store and track orders</p>
+    </div>
+
+    <div class="notifications-panel" id="notificationsPanel">
+      <div class="notif-header">
+        <h4><i class="fas fa-bell"></i> Recent Activity</h4>
+        <span class="notif-badge" id="notifBadge">0</span>
+      </div>
+      <div class="notif-list" id="notifList">
+        <p style="color:#999;font-size:0.85rem;text-align:center;padding:20px;">No recent activity</p>
+      </div>
+    </div>
+
+    <div class="admin-section">
+      <h4><i class="fas fa-plus-circle"></i> Add New Product</h4>
+      <div class="admin-form">
+        <input type="text" id="pName" placeholder="Product Name (e.g., Aqua Splash)">
+        <input type="number" id="pPrice" placeholder="Selling Price (₹)">
+        <input type="number" id="pOriginal" placeholder="Original Price (₹)">
+        <select id="pCategory">
+          <option value="boys">Boys</option>
+          <option value="boys-sandals">Boys Sandals</option>
+          <option value="girls">Girls</option>
+          <option value="girls-sandals">Girls Sandals</option>
+          <option value="baby">Baby</option>
+          <option value="running-slippers">Running Slippers</option>
+          <option value="crocs">Crocs</option>
+        </select>
+        <input type="text" id="pImage" placeholder="Image URL (e.g., 1774851741976.jpg)">
+        <input type="text" id="pColors" placeholder="Colors (e.g., Purple, Silver White, Light Pink)">
+        <input type="text" id="pSizes" placeholder="Size Range (e.g., 1-5)">
+        <textarea id="pDesc" placeholder="Product description..."></textarea>
+        <button onclick="addProduct()"><i class="fas fa-plus"></i> Add Product</button>
+      </div>
+    </div>
+
+    <div class="admin-section">
+      <h4><i class="fas fa-list"></i> Manage Products</h4>
+      <div class="admin-products" id="adminProducts"></div>
+    </div>
+  </div>
+</div>
+
+<!-- AI CHATBOT -->
+<button class="chatbot-btn" id="chatbotBtn" onclick="toggleChatbot()">
+  <i class="fas fa-comments"></i>
+</button>
+<button class="dark-mode-btn" onclick="toggleDarkMode()" title="Toggle Dark Mode">
+  <i class="fas fa-moon" id="darkModeIcon"></i>
+</button>
+
+<div class="emoji-picker" id="emojiPicker">
+  <button onclick="insertEmoji('😊')">😊</button>
+  <button onclick="insertEmoji('👍')">👍</button>
+  <button onclick="insertEmoji('👶')">👶</button>
+  <button onclick="insertEmoji('👟')">👟</button>
+  <button onclick="insertEmoji('❤️')">❤️</button>
+  <button onclick="insertEmoji('🎉')">🎉</button>
+  <button onclick="insertEmoji('😍')">😍</button>
+  <button onclick="insertEmoji('💝')">💝</button>
+</div>
+
+<div class="chatbot-window" id="chatbotWindow">
+  <div class="chatbot-header">
+    <h4><i class="fas fa-robot"></i> Kids Choice Assistant</h4>
+    <div class="chatbot-actions">
+      <button onclick="toggleDarkMode()" title="Dark Mode"><i class="fas fa-moon"></i></button>
+      <button onclick="toggleChatbot()" title="Close"><i class="fas fa-times"></i></button>
+    </div>
+  </div>
+  <div class="chatbot-messages" id="chatMessages">
+    <div class="message bot">
+      <div class="message-avatar"><i class="fas fa-robot"></i></div>
+      <div class="message-content">
+        Hi! Welcome to Kids Choice! 👋 Your trusted kids footwear store since 2006. We serve kids from 6 months to 12 years. How can I help you today?
+        <div class="quick-replies">
+          <span class="quick-reply" onclick="sendQuickReply('Show me girls shoes')">Girls Shoes</span>
+          <span class="quick-reply" onclick="sendQuickReply('Show me boys shoes')">Boys Shoes</span>
+          <span class="quick-reply" onclick="sendQuickReply('Best sellers?')">Best Sellers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="chatbot-input-area">
+    <button onclick="toggleEmojiPicker()" style="background:none;color:#666;"><i class="far fa-smile"></i></button>
+    <input type="text" class="chatbot-input" id="chatInput" placeholder="Type a message..." onkeypress="handleChatKey(event)">
+    <button onclick="sendChatMessage()"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-section">
+      <h4><i class="fas fa-shoe-prints"></i> Kids Choice</h4>
+      <p><i class="fas fa-map-marker-alt"></i> 26 Tutorial Market, Near Teen Darwaza, Ahmedabad</p>
+      <p><i class="fas fa-clock"></i> Open Daily 11:00 AM - 8:00 PM<br><span style="margin-left:20px;font-size:0.8rem;">(Except Public Holidays)</span></p>
+      <p><i class="fas fa-phone"></i> +91 9904873711 / 9904891866</p>
+      <p><i class="fab fa-whatsapp"></i> WhatsApp: 919904873711</p>
+    </div>
+    <div class="footer-section">
+      <h4><i class="fas fa-info-circle"></i> Quick Info</h4>
+      <p><i class="fas fa-calendar-alt"></i> Since 2006 - 18+ years of trust</p>
+      <p><i class="fas fa-child"></i> Kids footwear for ages 6 months to 12 years</p>
+      <p><i class="fas fa-exchange-alt"></i> Exchange anytime - No time limit!</p>
+      <p><i class="fas fa-redo"></i> Return accepted at any time</p>
+      <p><i class="fas fa-boxes"></i> Bulk orders welcome (except school shoes)</p>
+      <p><i class="fas fa-truck"></i> Free delivery on orders above ₹499</p>
+      <p><i class="fas fa-star"></i> Many top brands available</p>
+      <p><i class="fas fa-heart"></i> Loved by 10,000+ families</p>
+    </div>
+    <div class="footer-section">
+      <h4><i class="fas fa-truck"></i> Delivery Areas</h4>
+      <p><i class="fas fa-map-pin"></i> All over Ahmedabad</p>
+      <p><i class="fas fa-plane"></i> Delivery across India available</p>
+      <p><i class="fas fa-clock"></i> 2-5 days delivery time</p>
+      <p><i class="fas fa-rupee-sign"></i> Cash on Delivery Available</p>
+    </div>
+    <div class="footer-section">
+      <h4><i class="fas fa-question-circle"></i> Need Help?</h4>
+      <p><i class="fab fa-whatsapp"></i> Chat on WhatsApp for instant support</p>
+      <p><i class="fas fa-phone"></i> Call us during store hours</p>
+      <p><i class="fas fa-envelope"></i> Visit our store for fitting help</p>
+      <a href="https://wa.me/919904873711?text=Hi! I want to order on WhatsApp" class="whatsapp-order-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i> Order on WhatsApp
+      </a>
+      <div class="whatsapp-comment-box">
+        <input type="text" id="whatsappComment" placeholder="Add a note for your order..." maxlength="100">
+      </div>
+    </div>
+  </div>
+  <div class="payment-section">
+    <h4><i class="fas fa-credit-card"></i> We Accept</h4>
+    <div class="payment-icons">
+      <div class="payment-icon"><i class="fas fa-money-bill-wave"></i> Cash</div>
+      <div class="payment-icon"><i class="fas fa-mobile-alt"></i> UPI</div>
+      <div class="payment-icon"><i class="fas fa-university"></i> Bank Transfer</div>
+    </div>
+  </div>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials-section">
+  <h2>⭐ What Our Customers Say ⭐</h2>
+  <div class="testimonials-grid">
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Best kids shoe store in Ahmedabad! My daughter loves their collection. The quality is amazing and prices are very reasonable. Will definitely visit again!"</p>
+      <div class="testimonial-author">— Aisha Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Been shopping here since 2010 for all my kids. The exchange policy is fantastic - no questions asked, anytime exchange! Truly a customer-friendly store."</p>
+      <div class="testimonial-author">— Aariz Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Good quality shoes but store was a bit crowded during sale. Staff was helpful though. Would recommend but wish parking was easier."</p>
+      <div class="testimonial-author">— Raj Patel, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Great collection of branded shoes. Staff helps with proper fitting. My son loves his new sneakers. Will definitely come back for more!"</p>
+      <div class="testimonial-author">— Hamza Patel, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Amazing collection of kids footwear! Found perfect shoes for my daughter. The quality is premium and prices are competitive. Love this store!"</p>
+      <div class="testimonial-author">— Ayesha Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My kids love shopping here. The staff is very patient and helps find the perfect fit. The crocs collection is fantastic!"</p>
+      <div class="testimonial-author">— Yusuf Shaikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Nice collection of boys shoes but found some designs a bit old fashioned. Staff suggested good options though. Overall satisfied."</p>
+      <div class="testimonial-author">— Priya Sharma, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Excellent service! They helped my child try different sizes and finally found the perfect fit. The exchange anytime policy gives peace of mind."</p>
+      <div class="testimonial-author">— Fatima Patel, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Found cute sandals for my baby girl. The material is very comfortable for delicate baby feet. Very happy with the purchase!"</p>
+      <div class="testimonial-author">— Sana Sheikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Good store overall but prices are slightly higher than online shops. Quality justifies the price though. Staff is very knowledgeable."</p>
+      <div class="testimonial-author">— Amit Shah, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Good variety of running slippers but limited stock of my son's size. Had to settle for second choice. Otherwise happy with purchase."</p>
+      <div class="testimonial-author">— Neha Desai, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Very hygienic store with good collection. My daughter loves the glittery girls shoes. Staff is friendly and helpful."</p>
+      <div class="testimonial-author">— Sara Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought first walker shoes for my 10 month old. The soft sole is perfect for learning to walk. Highly recommend this store!"</p>
+      <div class="testimonial-author">— Arbaz Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Crocs are comfortable but wish they had more color options for boys. Quality is good but packaging could be better."</p>
+      <div class="testimonial-author">— Bilal Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Wonderful experience! The store has shoes for all ages from baby to 12 years. Found perfect match for both my kids."</p>
+      <div class="testimonial-author">— Ayan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The baby sandals are so cute! My little one looks adorable in them. Great finishing and comfortable for baby feet."</p>
+      <div class="testimonial-author">— Mariyam Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Love the no questions asked exchange policy. Kids grow fast so this is very helpful. Got bigger size exchanged easily."</p>
+      <div class="testimonial-author">— Suhana Patel, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought running slippers for my daughter who is into athletics. Perfect grip and very lightweight. Excellent quality!"</p>
+      <div class="testimonial-author">— Sidra Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Nice sneakers collection but fitting was slightly off for my child's wide feet. Staff helped with exchange but it took extra time."</p>
+      <div class="testimonial-author">— Kiran Mehta, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Very reasonable prices for such premium quality. Got my daughter a beautiful dressy shoe for her birthday. She was so happy!"</p>
+      <div class="testimonial-author">— Amreen Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"School shoes quality is good but shine fades after few weeks. Comfort is excellent though. Kids love wearing them daily."</p>
+      <div class="testimonial-author">— Rajesh Kumar, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Friendly staff and good environment. My kids enjoy coming here to pick their new shoes. Always leave with a smile!"</p>
+      <div class="testimonial-author">— Nasreen Patel, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Beautiful sparkle sneakers but glitter started falling after a week. Design is very pretty though. Daughter still loves them!"</p>
+      <div class="testimonial-author">— Farhan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Fast delivery and good packaging. Ordered online and received within 2 days. Very impressed with the service!"</p>
+      <div class="testimonial-author">— Irfan Shaikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My grandson loves his new crocs. He wears them everywhere - at home, park, school. Very comfortable and easy to clean!"</p>
+      <div class="testimonial-author">— Abdul Khan, Grandparent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Honest and reliable store. Never felt cheated with prices. They offer best quality at fair prices. Trusted shop!"</p>
+      <div class="testimonial-author">— Sameer Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The baby walker shoes are perfect for my little one. Soft sole helps natural foot development. Doctor recommended!"</p>
+      <div class="testimonial-author">— Sobia Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought 3 pairs in one visit! Got such good deals. The staff helped my kids pick their favorites. Will come again soon!"</p>
+      <div class="testimonial-author">— Raziya Sheikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Perfect store for party wear shoes. Found beautiful gold and silver shoes for my daughter's school function. She looked adorable!"</p>
+      <div class="testimonial-author">— Mahira Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The boys sandals collection is great for summer. Breathable design keeps feet cool. My son didn't want to take them off!"</p>
+      <div class="testimonial-author">— Harris Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Thank you Kids Choice for the no hassle exchange. My son grew out of his shoes in 3 months and they exchanged without any problem!"</p>
+      <div class="testimonial-author">— Aaliya Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Been a loyal customer for 8 years. My first child now 12 years and getting shoes from here since birth. Great quality maintained!"</p>
+      <div class="testimonial-author">— Saif Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Best price guarantee! They matched price when I found it cheaper elsewhere. Really appreciate their honesty and customer-first approach."</p>
+      <div class="testimonial-author">— Azhar Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Girls flip flops and sandals are so pretty! My daughter loves choosing her own designs. Great variety for all preferences."</p>
+      <div class="testimonial-author">— Hina Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought school shoes here and they lasted entire academic year! Very durable and good finishing. Worth every rupee spent!"</p>
+      <div class="testimonial-author">— Ayan Shaikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The store is well organized and clean. Easy to browse and find what you need. Staff is cooperative and not pushy at all."</p>
+      <div class="testimonial-author">— Zoya Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My daughter is very active and these running shoes are perfect! Lightweight with great grip. She can run and play comfortably."</p>
+      <div class="testimonial-author">— Rayyan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Special thanks to the staff for helping during festival sale. They were patient with my fussy toddler. Great customer service!"</p>
+      <div class="testimonial-author">— Saima Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Got custom fitting help for my kids flat feet issue. They suggested right type of shoes. Very knowledgeable staff!"</p>
+      <div class="testimonial-author">— Shoaib Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bulk order for my kids daycare was handled professionally. Got good discount on bulk purchase. Will recommend for schools too!"</p>
+      <div class="testimonial-author">— Rabia Khan, School Owner</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The sparkle collection for girls is to die for! So many trending designs. My daughter felt like a star wearing them!"</p>
+      <div class="testimonial-author">— Natasha Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Perfect fit guarantee works! They measured both feet properly. The shoes fit perfectly and my child is very comfortable."</p>
+      <div class="testimonial-author">— Armaan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Monsoon collection is excellent! Waterproof sandals saved my baby's feet during rains. Smart designs for Indian weather!"</p>
+      <div class="testimonial-author">— Iqra Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Gift wrapping option is so helpful! Bought shoes as a birthday gift. They looked beautiful in gift box. Great service!"</p>
+      <div class="testimonial-author">— Ayesha Sheikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My son is very picky about shoes but he loved the collection here! He picked his own shoes for the first time. Thank you!"</p>
+      <div class="testimonial-author">— Sadiya Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Shoe care tips from staff were very helpful. Learned how to maintain shoes properly. They really care about customers!"</p>
+      <div class="testimonial-author">— Faizan Patel, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The most trusted name in kids footwear since generations. My parents also brought me here as a child. Now I bring my kids!"</p>
+      <div class="testimonial-author">— Amaan Khan, Second Generation Customer</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought sports shoes for my daughter who does karate. Perfect flexibility and grip. She performs better in these!"</p>
+      <div class="testimonial-author">— Ayaan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Celebrated our 10th visit milestone! Got special discount as loyal customer. Feel valued as a customer here. Thank you!"</p>
+      <div class="testimonial-author">— Mehak Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The online store is very convenient. Browse from home and order. Delivery is prompt. Same quality as in-store products!"</p>
+      <div class="testimonial-author">— Hamza Sheikh, Online Shopper</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Rainbow colors collection is perfect for monsoon! Brightens up rainy days. Kids love the vibrant designs!"</p>
+      <div class="testimonial-author">— Kavita Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Comfort foam insoles are amazing! My child can play for hours without foot pain. Worth the investment!"</p>
+      <div class="testimonial-author">— Danish Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Velcro shoes are so convenient for toddlers! Easy for them to wear by themselves. Boosted my child's confidence!"</p>
+      <div class="testimonial-author">— Priya Sheikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Anti-slip soles saved my baby from falling during slippery season. Safety first shoes at affordable prices. Highly recommend!"</p>
+      <div class="testimonial-author">— Rohan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought wedding party shoes for my niece. She looked gorgeous! So many premium designs for special occasions!"</p>
+      <div class="testimonial-author">— Anjum Khan, Aunt</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Summer collection with breathable mesh is a lifesaver! Kids feet stay cool even in hot Ahmedabad weather!"</p>
+      <div class="testimonial-author">— Sahil Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Memory foam shoes are blessing for growing kids! Perfect support for developing feet. My pediatrician approved!"</p>
+      <div class="testimonial-author">— Ruhi Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Kids don't compromise on style! Found superhero themed sneakers that my son absolutely loves. Win-win situation!"</p>
+      <div class="testimonial-author">— Zain Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The return policy is very customer friendly. Got full refund when size didn't suit. No questions asked. Real dealers!"</p>
+      <div class="testimonial-author">— Heena Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Festival sale offers are unbeatable! Got premium brands at 50% off. Stock up on shoes for whole family!"</p>
+      <div class="testimonial-author">— Mital Khan, Smart Shopper</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My daughter loves collecting shoes from here! She has 12 pairs now. Each one is her favorite. Thank you Kids Choice!"</p>
+      <div class="testimonial-author">— Neha Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Premium brands available at decent prices. Worth paying for quality that lasts. My kids shoes always from Kids Choice!"</p>
+      <div class="testimonial-author">— Qasim Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Even grandparents love shopping here! They spoil my kids with shoes every visit. Great family store tradition!"</p>
+      <div class="testimonial-author">— Aditi Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Pre-walkers for baby are so soft and cute! Perfect for babies learning to stand. Happy baby, happy parents!"</p>
+      <div class="testimonial-author">— Khushbu Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought sports slippers for my cricket practice. Excellent grip on all surfaces. Now I play better!"</p>
+      <div class="testimonial-author">— Amaan Sheikh, Young Cricketer</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Winter collection with warm lining is perfect for Ahmedabad winters! Feet never get cold. Great material quality!"</p>
+      <div class="testimonial-author">— Jenil Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The cartoon character shoes are my son's demand every time! He loves Spider-Man and Batman designs. So many options!"</p>
+      <div class="testimonial-author">— Kavish Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Eco-friendly materials used! As a conscious parent, I appreciate the sustainable approach. Good for environment!"</p>
+      <div class="testimonial-author">— Tanvi Khan, Conscious Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought hospital-grade orthopedic shoes here on doctor advice. Good selection of supportive footwear for kids!"</p>
+      <div class="testimonial-author">— Shreya Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The WhatsApp support is very responsive! Got answers within minutes. Easy to order via chat!"</p>
+      <div class="testimonial-author">— Rahul Khan, Tech-Savvy Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Birthday party shoes are so festive! My daughter looked princess-like in her new gold sandals. All eyes on her!"</p>
+      <div class="testimonial-author">— Drishti Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought school shoes that pass the uniform check perfectly! Right shine, right style. Principal approved!"</p>
+      <div class="testimonial-author">— Vidhi Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Referred 10 families already! Because I'm so impressed with quality and service. Real mouth publicity!"</p>
+      <div class="testimonial-author">— Hemal Khan, Brand Ambassador</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Wide feet no problem! Found extended size options that fit perfectly. Finally shoes that don't squeeze!"</p>
+      <div class="testimonial-author">— Darshan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The shoe size guide online is accurate! Ordered correct size first time. No exchange needed. Perfect online shopping!"</p>
+      <div class="testimonial-author">— Shivani Khan, Online Buyer</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Nephew's shoes from here survived an entire vacation! Beach, mountains, sightseeing - still in great condition!"</p>
+      <div class="testimonial-author">— Kinjal Khan, Happy Aunt</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My daughter wants to be a shoe designer now! She says she'll make shoes like the ones she saw at Kids Choice!"</p>
+      <div class="testimonial-author">— Madhuri Khan, Proud Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"First birthday shoe ceremony gift was from here! Traditional mojaris with modern comfort. Perfect blend!"</p>
+      <div class="testimonial-author">— Urvi Khan, Traditional Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Dancing shoes with flexible sole are amazing! My daughter dances beautifully without any discomfort. Top quality!"</p>
+      <div class="testimonial-author">— Sanjana Khan, Dance Mom</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Cycling shoes with grippy sole are perfect! My son cycles safely now. Good protection and comfort!"</p>
+      <div class="testimonial-author">— Vinit Khan, Sports Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The Paw Patrol collection made my son's day! He was so happy to get his favorite character shoes. Magic in their eyes!"</p>
+      <div class="testimonial-author">— Nidhi Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My twin girls love matching shoes! Found same design in different sizes. Perfect for twins!"</p>
+      <div class="testimonial-author">— Shruti Khan, Twin Mom</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Fashion forward shoes without burning pocket! My teen daughter approves the trending designs. Youth-friendly store!"</p>
+      <div class="testimonial-author">— Urvashi Khan, Parent of Teen</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My daughter won shoe beauty contest at school! She wore the sparkly flats from Kids Choice. So proud!"</p>
+      <div class="testimonial-author">— Rinki Khan, Proud Mother</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Water-friendly shoes are best for monsoon! My kids play in rain puddles without worry. Easy to wash and dry!"</p>
+      <div class="testimonial-author">— Jignesh Khan, Monsoon Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought shoes for my kids and nieces together. Got family discount! They remember this store as shoe heaven!"</p>
+      <div class="testimonial-author">— Poojan Khan, Family Shopper</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Every foot type has options! Narrow, wide, flat - found perfect fit for my unique foot challenges."</p>
+      <div class="testimonial-author">— Shivali Khan, Customer with Special Needs</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The loyalty points program is generous! Earned enough points for free shoes. Feeling rewarded as loyal customer!"</p>
+      <div class="testimonial-author">— Nishant Khan, Loyalty Member</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My grandson refuses to wear any other shoes now! He says Kids Choice shoes are the comfiest. Their words!"</p>
+      <div class="testimonial-author">— Gangaben, Grandparent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My daughter started walking at 10 months! Credited the supportive first walker shoes from here. Milestone achieved!"</p>
+      <div class="testimonial-author">— Maitri Khan, Happy Mom</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The emoji prints on soles make walking fun! My toddler giggles seeing smiley faces. Shoes that bring joy!"</p>
+      <div class="testimonial-author">— Pariniti Khan, Creative Mom</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought school shoes for principal recommended orthopedic requirements. Staff helped select appropriate footwear. Very supportive!"</p>
+      <div class="testimonial-author">— Rasila Shah, School Staff</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My kids fight over who gets to wear their Kids Choice shoes! Says a lot about how much they love them!"</p>
+      <div class="testimonial-author">— Pravin Patel, Amazed Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Glitter-free options for my daughter with sensory issues! Thoughtful collection for special needs. Appreciated!"</p>
+      <div class="testimonial-author">— Nita Shah, Sensitive Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The 18 years legacy shows in their experience! They know exactly what works for growing feet. Expert guidance!"</p>
+      <div class="testimonial-author">— Yogesh Patel, Experienced Customer</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Cultural event shoes are perfect! Bought traditional mojaris for Diwali. My son looked adorable in ethnic wear!"</p>
+      <div class="testimonial-author">— Prerna Shah, Festival Shopper</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought outdoor hiking shoes for my adventure kid! Durable, waterproof, and comfortable. Conquered mountains safely!"</p>
+      <div class="testimonial-author">— Rujan Patel, Adventure Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Skating shoes with proper ankle support are essential! Found perfect inline skating footwear. No injuries since!"</p>
+      <div class="testimonial-author">— Shlok Patel, Skating Enthusiast</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My daughter styled her own outfit with shoes from here! Fashion sense developing early. She has good taste!"</p>
+      <div class="testimonial-author">— Rasika Shah, Proud Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My son won school running race wearing Kids Choice shoes! Faster than ever. Coincidence? I think not!"</p>
+      <div class="testimonial-author">— Prashant Patel, Sports Enthusiast</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Gifted shoe hamper to my nieces! Beautifully packaged and affordable. Made birthday extra special!"</p>
+      <div class="testimonial-author">— Anjali Shah, Gift Giver</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My granddaughter only wears Kids Choice shoes! She recognizes the bag everywhere. True brand loyalty from a 4 year old!"</p>
+      <div class="testimonial-author">— Kokila Patel, Doting Grandparent</div>
+    </div>
+  </div>
+</section>
+
+<!-- WRITE REVIEW SECTION -->
+<section class="write-review-section">
+  <h2>✍️ Write a Review</h2>
+  <p class="review-subtitle">Share your experience with Kids Choice and help other parents!</p>
+  <div class="review-form-container">
+    <div class="review-form">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="reviewName" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label>Star Rating</label>
+        <div class="star-rating">
+          <span class="star" data-value="1">⭐</span>
+          <span class="star" data-value="2">⭐</span>
+          <span class="star" data-value="3">⭐</span>
+          <span class="star" data-value="4">⭐</span>
+          <span class="star" data-value="5">⭐</span>
+        </div>
+        <input type="hidden" id="selectedRating" value="0">
+        <span class="rating-text" id="ratingText">Select rating</span>
+      </div>
+      <div class="form-group">
+        <label>Your Review</label>
+        <textarea id="reviewText" rows="4" placeholder="Share your experience with us..." required></textarea>
+      </div>
+      <button type="button" class="submit-review-btn" onclick="submitReview()">
+        <i class="fas fa-paper-plane"></i> Submit Review
+      </button>
+    </div>
+    <div class="review-success" id="reviewSuccess" style="display: none;">
+      <i class="fas fa-check-circle"></i>
+      <h3>Thank You!</h3>
+      <p>Your review has been submitted successfully.</p>
+    </div>
+  </div>
+</section>
+
+  <div class="footer-bottom">
+    <p>© 2026 Kids Choice. Premium Kids Footwear Since 2006. All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/919904873711" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<script>
+// DATA
+const WHATSAPP = '919904873711';
+const ADMIN_PASS = 'ibrahim';
+
+// WhatsApp order button with comment
+document.addEventListener('DOMContentLoaded', function() {
+  const whatsappBtn = document.querySelector('.whatsapp-order-btn');
+  const commentInput = document.getElementById('whatsappComment');
+  if (whatsappBtn && commentInput) {
+    whatsappBtn.addEventListener('click', function(e) {
+      const comment = commentInput.value.trim();
+      if (comment) {
+        const baseMsg = 'Hi! I want to order on WhatsApp';
+        const fullMsg = encodeURIComponent(baseMsg + '\n\nNote: ' + comment);
+        whatsappBtn.href = 'https://wa.me/' + WHATSAPP + '?text=' + fullMsg;
+      }
+    });
+  }
+});
+
+// Clear cached products to reload images
+localStorage.removeItem('kc_products');
+
+let products = JSON.parse(localStorage.getItem('kc_products')) || [
+  {
+    id: 1,
+    name: 'Aqua Splash - Lightweight Sneakers',
+    price: 949,
+    originalPrice: 1399,
+    category: 'girls',
+    image: 'products/949snekers.jpg',
+    colors: [{name: 'Purple', hex: '#9b59b6'}, {name: 'Silver White', hex: '#ecf0f1'}, {name: 'Light Pink', hex: '#ffb6c1'}],
+    sizes: ['1', '2', '3', '4', '5'],
+    sizeNum: {min: 1, max: 5},
+    rating: 4.5,
+    reviewCount: 128,
+    badges: ['bestseller'],
+    description: 'Trendy and lightweight sneakers perfect for active girls. Breathable mesh material with cushioned sole for maximum comfort.',
+    specs: {'Material': 'Mesh & Synthetic', 'Sole': 'Rubber Anti-slip', 'Closure': 'Velcro'}
+  },
+  {
+    id: 2,
+    name: 'Sweet Heart - Classic Sneakers',
+    price: 849,
+    originalPrice: 1199,
+    category: 'boys',
+    image: 'products/849boys-sneakers.jpg',
+    colors: [{name: 'Black', hex: '#2c3e50'}, {name: 'Maroon', hex: '#922b21'}, {name: 'Light Brown', hex: '#d4a574'}],
+    sizes: ['1', '2', '3', '4', '5'],
+    sizeNum: {min: 1, max: 5},
+    rating: 4.3,
+    reviewCount: 89,
+    badges: ['bestseller'],
+    description: 'Classic sneakers for stylish boys. Durable construction with premium finish. Perfect for everyday wear.',
+    specs: {'Material': 'Synthetic Leather', 'Sole': 'EVA Comfort', 'Closure': 'Laces + Velcro'}
+  },
+  {
+    id: 3,
+    name: 'Tiny Steps - Soft Sole First Walker',
+    price: 1149,
+    originalPrice: 1599,
+    category: 'girls',
+    image: 'products/1149girlsshoes.jpg',
+    colors: [{name: 'Purple', hex: '#9b59b6'}, {name: 'Light Pink', hex: '#ffb6c1'}],
+    sizes: ['3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    sizeNum: {min: 3, max: 12},
+    rating: 4.8,
+    reviewCount: 256,
+    badges: ['bestseller', 'new'],
+    description: 'Premium first walker with soft leather sole. Ideal for babies learning to walk. Flexible and breathable design.',
+    specs: {'Material': 'Soft Leather', 'Sole': 'Leather Soft', 'Closure': 'Velcro'}
+  },
+  {
+    id: 4,
+    name: 'Baby Sandal',
+    price: 350,
+    originalPrice: 499,
+    category: 'running-slippers',
+    image: 'products/349sandals.png',
+    colors: [{name: 'Blue', hex: '#3498db'}],
+    sizes: ['3', '4', '5', '6', '7', '8', '9', '10'],
+    sizeNum: {min: 3, max: 10},
+    rating: 4.2,
+    reviewCount: 67,
+    badges: ['sale'],
+    description: 'Waterproof and anti-slip baby sandals. Perfect for monsoon season. Lightweight and comfortable for little feet.',
+    specs: {'Material': 'Waterproof PVC', 'Sole': 'Anti-slip Rubber', 'Closure': 'Buckle'}
+  },
+  {
+    id: 7,
+    name: 'Speed Demon - Running Slippers',
+    price: 399,
+    originalPrice: 599,
+    category: 'crocs',
+    image: 'products/399crocs.jpg',
+    colors: [{name: 'Cream', hex: '#FFFDD0'}, {name: 'Purple', hex: '#9B59B6'}, {name: 'Light Pink', hex: '#FFB6C1'}],
+    sizes: ['1', '2', '3', '4', '5', '6', '7', '8'],
+    sizeNum: {min: 1, max: 8},
+    rating: 4.3,
+    reviewCount: 94,
+    badges: ['bestseller'],
+    description: 'Ultra-lightweight running slippers for active kids. Flexible sole and breathable upper for maximum performance.',
+    specs: {'Material': 'Mesh', 'Sole': 'Lightweight Rubber', 'Closure': 'Slip-on'}
+  },
+  {
+    id: 8,
+    name: 'Cloud Comfort - Kids Crocs',
+    price: 349,
+    originalPrice: 499,
+    category: 'running-slippers',
+    image: 'products/349crocs.png',
+    colors: [{name: 'Yellow', hex: '#FFD700'}, {name: 'Dark Pink', hex: '#C2185B'}],
+    sizes: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+    sizeNum: {min: 1, max: 10},
+    rating: 4.7,
+    reviewCount: 203,
+    badges: ['bestseller'],
+    description: 'Genuine Crocs-style foam slippers. Iconic comfort with pivoting straps. Water-friendly and easy to clean.',
+    specs: {'Material': 'Croslite Foam', 'Sole': 'Cushioned', 'Closure': 'Pivot Strap'}
+  }
+];
+
+let cart = JSON.parse(localStorage.getItem('kc_cart')) || [];
+let wishlist = JSON.parse(localStorage.getItem('kc_wishlist')) || [];
+let notifications = JSON.parse(localStorage.getItem('kc_notifications')) || [];
+let appliedCoupon = null;
+let isLoggedIn = false;
+let pdpProduct = null;
+let selectedColor = null;
+let selectedSize = null;
+let pdpQty = 1;
+let isDarkMode = false;
+let chatHistory = [];
+let unreadMessages = 0;
+
+// COUPONS
+const coupons = {
+  'KIDS10': {type: 'percent', value: 10, desc: '10% OFF'},
+  'FLAT100': {type: 'fixed', value: 100, desc: '₹100 OFF'},
+  'WELCOME20': {type: 'percent', value: 20, desc: '20% OFF'}
+};
+
+// INIT
+document.addEventListener('DOMContentLoaded', () => {
+  renderProducts();
+  updateCart();
+  updateWishlist();
+  renderAdminProducts();
+  renderNotifications();
+  loadDarkMode();
+  initNotifications();
+});
+
+// NOTIFICATIONS
+function initNotifications() {
+  if ('Notification' in window && Notification.permission === 'granted') {
+    setInterval(checkNewOrders, 30000);
+  }
+}
+
+function checkNewOrders() {
+  const lastCheck = localStorage.getItem('kc_last_order_check') || '0';
+  const newOrders = notifications.filter(n => n.type === 'order' && parseInt(n.time) > parseInt(lastCheck));
+  if (newOrders.length > 0 && document.hidden) {
+    showBrowserNotification('New Order!', `You have ${newOrders.length} new order(s)!`);
+  }
+  localStorage.setItem('kc_last_order_check', Date.now().toString());
+}
+
+function showBrowserNotification(title, body) {
+  if ('Notification' in window && Notification.permission === 'granted') {
+    new Notification(title, {body, icon: '🛒', badge: '🛒'});
+    playNotificationSound();
+  }
+}
+
+// REVIEWS - STAR RATING
+document.addEventListener('DOMContentLoaded', () => {
+  const stars = document.querySelectorAll('.star-rating .star');
+
+  stars.forEach((star, index) => {
+    star.addEventListener('click', () => {
+      const selectedRating = star.dataset.value;
+      document.getElementById('selectedRating').value = selectedRating;
+      updateStarDisplay(stars, index);
+      updateRatingText(selectedRating);
+    });
+
+    star.addEventListener('mouseover', () => {
+      highlightStars(stars, index);
+    });
+
+    star.addEventListener('mouseout', () => {
+      resetStars(stars);
+      const rating = document.getElementById('selectedRating').value;
+      if (rating > 0) {
+        updateStarDisplay(stars, rating - 1);
+      }
+    });
+  });
+});
+
+function highlightStars(stars, index) {
+  stars.forEach((star, i) => {
+    if (i <= index) {
+      star.classList.add('active');
+      star.style.opacity = '1';
+    } else {
+      star.classList.remove('active');
+      star.style.opacity = '0.4';
+    }
+  });
+}
+
+function resetStars(stars) {
+  stars.forEach(star => {
+    star.classList.remove('active');
+    star.style.opacity = '0.4';
+  });
+}
+
+function updateStarDisplay(stars, index) {
+  stars.forEach((star, i) => {
+    if (i <= index) {
+      star.classList.add('active');
+      star.style.opacity = '1';
+    } else {
+      star.classList.remove('active');
+      star.style.opacity = '0.4';
+    }
+  });
+}
+
+function updateRatingText(rating) {
+  const ratingText = document.getElementById('ratingText');
+  const texts = ['', 'Poor ⭐', 'Fair ⭐⭐', 'Good ⭐⭐⭐', 'Very Good ⭐⭐⭐⭐', 'Excellent ⭐⭐⭐⭐⭐'];
+  ratingText.textContent = texts[rating] || 'Select rating';
+}
+
+function submitReview() {
+  const name = document.getElementById('reviewName').value.trim();
+  const rating = document.getElementById('selectedRating').value;
+  const text = document.getElementById('reviewText').value.trim();
+
+  if (!name) {
+    showToast('Please enter your name', 'error');
+    return;
+  }
+  if (rating === '0') {
+    showToast('Please select a star rating', 'error');
+    return;
+  }
+  if (!text) {
+    showToast('Please write a review', 'error');
+    return;
+  }
+
+  let reviews = JSON.parse(localStorage.getItem('kc_reviews')) || [];
+
+  const newReview = {
+    name: name,
+    rating: parseInt(rating),
+    text: text,
+    date: new Date().toISOString()
+  };
+
+  reviews.unshift(newReview);
+  localStorage.setItem('kc_reviews', JSON.stringify(reviews));
+
+  document.querySelector('.review-form').style.display = 'none';
+  document.getElementById('reviewSuccess').style.display = 'block';
+
+  setTimeout(() => {
+    document.querySelector('.review-form').style.display = 'block';
+    document.getElementById('reviewSuccess').style.display = 'none';
+    document.getElementById('reviewName').value = '';
+    document.getElementById('reviewText').value = '';
+    document.getElementById('selectedRating').value = '0';
+    resetStars(document.querySelectorAll('.star-rating .star'));
+    document.getElementById('ratingText').textContent = 'Select rating';
+  }, 3000);
+
+  showToast('Thank you for your review!', 'success');
+}
+
+function playNotificationSound() {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.frequency.value = 800;
+    osc.type = 'sine';
+    gain.gain.value = 0.3;
+    osc.start();
+    gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.5);
+    osc.stop(ctx.currentTime + 0.5);
+  } catch(e) {}
+}
+
+function addNotification(type, message) {
+  const notif = {type, message, time: Date.now().toString()};
+  notifications.unshift(notif);
+  if (notifications.length > 50) notifications.pop();
+  localStorage.setItem('kc_notifications', JSON.stringify(notifications));
+  renderNotifications();
+  if (type === 'order') {
+    showBrowserNotification('New Order!', message);
+  }
+}
+
+function renderNotifications() {
+  const badge = document.getElementById('notifBadge');
+  const list = document.getElementById('notifList');
+  badge.textContent = notifications.length;
+  if (notifications.length === 0) {
+    list.innerHTML = '<p style="color:#999;font-size:0.85rem;text-align:center;padding:20px;">No recent activity</p>';
+    return;
+  }
+  list.innerHTML = notifications.slice(0, 10).map(n => `
+    <div class="notif-item ${n.type}">
+      <i class="fas fa-${n.type === 'order' ? 'shopping-cart' : 'heart'}"></i>
+      <span>${n.message}</span>
+      <span class="time">${formatTime(n.time)}</span>
+    </div>
+  `).join('');
+}
+
+function formatTime(ts) {
+  const diff = Date.now() - parseInt(ts);
+  if (diff < 60000) return 'Just now';
+  if (diff < 3600000) return Math.floor(diff/60000) + 'm ago';
+  if (diff < 86400000) return Math.floor(diff/3600000) + 'h ago';
+  return Math.floor(diff/86400000) + 'd ago';
+}
+
+// RENDER PRODUCTS
+function renderProducts(filter = 'all') {
+  const container = document.getElementById('products');
+  let filtered = filter === 'all' ? [...products] : products.filter(p => p.category === filter);
+
+  container.innerHTML = filtered.map(p => {
+    const discount = p.originalPrice ? Math.round((1 - p.price/p.originalPrice) * 100) : 0;
+    const stars = renderStars(p.rating);
+    const colorSwatches = p.colors ? p.colors.map(c => `<div class="color-swatch" style="background:${c.hex};" title="${c.name}"></div>`).join('') : '';
+    const badges = p.badges ? p.badges.map(b => `<span class="badge badge-${b}">${b}</span>`).join('') : '';
+    const isWishlisted = wishlist.some(w => w.id === p.id);
+
+    return `
+      <div class="product">
+        <div class="product-badges">${badges}</div>
+        <img src="${p.image}" alt="${p.name}" class="product-image" onclick="openPDP(${p.id})" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22>👟</text></svg>'">
+        <button class="wishlist-btn ${isWishlisted ? 'active' : ''}" onclick="event.stopPropagation();toggleWishlistItem(${p.id})">
+          <i class="fas fa-heart"></i>
+        </button>
+        <div class="product-info">
+          <div class="product-name" onclick="openPDP(${p.id})">${p.name}</div>
+          <div class="product-category">${p.category.charAt(0).toUpperCase() + p.category.slice(1)}</div>
+          <div class="stars">${stars} <span class="rating-text">${p.rating} (${p.reviewCount})</span></div>
+          <div class="price-row">
+            <span class="price-current">₹${p.price}</span>
+            ${p.originalPrice ? `<span class="price-original">₹${p.originalPrice}</span>` : ''}
+            ${discount > 0 ? `<span class="price-discount">${discount}% off</span>` : ''}
+          </div>
+          <div class="color-swatches">${colorSwatches}</div>
+          <div class="product-actions">
+            <button class="btn btn-primary" onclick="quickAddToCart(${p.id})"><i class="fas fa-cart-plus"></i> Add</button>
+            <button class="btn btn-outline" onclick="openPDP(${p.id})"><i class="fas fa-eye"></i></button>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function renderStars(rating) {
+  let stars = '';
+  for (let i = 1; i <= 5; i++) {
+    if (i <= Math.floor(rating)) stars += '<i class="fas fa-star filled"></i>';
+    else if (i - rating < 1 && i - rating > 0) stars += '<i class="fas fa-star-half-alt filled"></i>';
+    else stars += '<i class="far fa-star empty"></i>';
+  }
+  return stars;
+}
+
+// FILTER & SORT
+function filterProducts(category) {
+  document.querySelectorAll('.cat-item, .filter-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelectorAll(`.cat-item, .filter-btn`).forEach(btn => {
+    if (btn.textContent.toLowerCase().includes(category) || (category === 'all' && btn.textContent.includes('All'))) {
+      btn.classList.add('active');
+    }
+  });
+  renderProducts(category);
+}
+
+function sortProducts(sortBy) {
+  let sorted = [...products];
+  switch(sortBy) {
+    case 'price-low': sorted.sort((a,b) => a.price - b.price); break;
+    case 'price-high': sorted.sort((a,b) => b.price - a.price); break;
+    case 'name': sorted.sort((a,b) => a.name.localeCompare(b.name)); break;
+    case 'rating': sorted.sort((a,b) => b.rating - a.rating); break;
+  }
+  const container = document.getElementById('products');
+  const filter = document.querySelector('.filter-btn.active')?.textContent.toLowerCase() || 'all';
+  const filtered = filter === 'all' ? sorted : sorted.filter(p => p.category === filter);
+  container.innerHTML = filtered.map(p => renderProductHTML(p)).join('');
+}
+
+// PDP
+function openPDP(id) {
+  pdpProduct = products.find(p => p.id === id);
+  if (!pdpProduct) return;
+
+  selectedColor = pdpProduct.colors[0];
+  selectedSize = pdpProduct.sizes[Math.floor(pdpProduct.sizes.length/2)];
+  pdpQty = 1;
+
+  document.getElementById('pdpImage').src = pdpProduct.image;
+  document.getElementById('pdpTitle').textContent = pdpProduct.name;
+  document.getElementById('pdpPrice').textContent = '₹' + pdpProduct.price;
+
+  const discount = pdpProduct.originalPrice ? Math.round((1 - pdpProduct.price/pdpProduct.originalPrice) * 100) : 0;
+  document.getElementById('pdpOriginal').textContent = pdpProduct.originalPrice ? '₹' + pdpProduct.originalPrice : '';
+  document.getElementById('pdpDiscount').textContent = discount > 0 ? discount + '% off' : '';
+  document.getElementById('pdpDescription').textContent = pdpProduct.description || '';
+
+  const badges = pdpProduct.badges ? pdpProduct.badges.map(b => `<span class="badge badge-${b}">${b}</span>`).join('') : '';
+  document.getElementById('pdpBadges').innerHTML = badges;
+
+  const stars = renderStars(pdpProduct.rating);
+  document.getElementById('pdpRating').innerHTML = `
+    <div class="stars">${stars}</div>
+    <span class="pdp-rating-count">${pdpProduct.rating} (${pdpProduct.reviewCount} reviews)</span>
+  `;
+
+  const colorsHtml = pdpProduct.colors.map(c => `
+    <div class="color-option ${c.name === selectedColor.name ? 'selected' : ''}" onclick="selectColor('${c.name}')">
+      <div class="swatch" style="background:${c.hex};"></div>
+      <span>${c.name}</span>
+    </div>
+  `).join('');
+  document.getElementById('pdpColors').innerHTML = colorsHtml;
+
+  const sizesHtml = pdpProduct.sizes.map(s => `
+    <div class="size-option ${s === selectedSize ? 'selected' : ''}" onclick="selectSize('${s}')">${s}</div>
+  `).join('');
+  document.getElementById('pdpSizes').innerHTML = sizesHtml;
+
+  document.getElementById('pdpQty').textContent = pdpQty;
+
+  const specsHtml = Object.entries(pdpProduct.specs || {}).map(([k,v]) => `
+    <div class="spec-row"><span class="spec-label">${k}</span><span class="spec-value">${v}</span></div>
+  `).join('');
+  document.getElementById('pdpSpecs').innerHTML = specsHtml;
+
+  document.getElementById('pdpModal').classList.add('active');
+}
+
+function closePDP() {
+  document.getElementById('pdpModal').classList.remove('active');
+  pdpProduct = null;
+}
+
+function selectColor(name) {
+  selectedColor = pdpProduct.colors.find(c => c.name === name);
+  document.querySelectorAll('.color-option').forEach(el => {
+    el.classList.toggle('selected', el.querySelector('span').textContent === name);
+  });
+}
+
+function selectSize(size) {
+  selectedSize = size;
+  document.querySelectorAll('.size-option').forEach(el => {
+    el.classList.toggle('selected', el.textContent === size);
+  });
+}
+
+function changePdpQty(delta) {
+  pdpQty = Math.max(1, pdpQty + delta);
+  document.getElementById('pdpQty').textContent = pdpQty;
+}
+
+function addToCartFromPDP() {
+  if (!pdpProduct) return;
+  const item = {
+    id: pdpProduct.id,
+    name: pdpProduct.name,
+    price: pdpProduct.price,
+    image: pdpProduct.image,
+    color: selectedColor ? selectedColor.name : '',
+    size: selectedSize,
+    qty: pdpQty
+  };
+
+  const existing = cart.find(c => c.id === item.id && c.color === item.color && c.size === item.size);
+  if (existing) {
+    existing.qty += pdpQty;
+  } else {
+    cart.push(item);
+  }
+
+  saveCart();
+  updateCart();
+  showToast(`${item.name} added to cart!`, 'success');
+  addNotification('cart', `Added to cart: ${item.name} (${item.color}, Size ${item.size}) x${item.qty}`);
+  closePDP();
+}
+
+// CART
+function quickAddToCart(id) {
+  const product = products.find(p => p.id === id);
+  if (!product) return;
+
+  const item = {
+    id: product.id,
+    name: product.name,
+    price: product.price,
+    image: product.image,
+    color: product.colors ? product.colors[0].name : '',
+    size: product.sizes ? product.sizes[Math.floor(product.sizes.length/2)] : '',
+    qty: 1
+  };
+
+  const existing = cart.find(c => c.id === item.id && c.color === item.color && c.size === item.size);
+  if (existing) {
+    existing.qty++;
+  } else {
+    cart.push(item);
+  }
+
+  saveCart();
+  updateCart();
+  showToast(`${item.name} added to cart!`, 'success');
+  addNotification('cart', `Added to cart: ${item.name}`);
+}
+
+function updateCart() {
+  document.getElementById('cartCount').textContent = cart.reduce((sum, c) => sum + c.qty, 0);
+  const container = document.getElementById('cartItems');
+
+  if (cart.length === 0) {
+    container.innerHTML = `
+      <div class="empty-state">
+        <i class="fas fa-shopping-cart"></i>
+        <h3>Your cart is empty</h3>
+        <p>Add some cute shoes for your kids!</p>
+      </div>
+    `;
+    renderPriceBreakdown();
+    return;
+  }
+
+  container.innerHTML = cart.map(c => `
+    <div class="cart-item">
+      <img src="${c.image}" alt="${c.name}" class="cart-item-img" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 80 80%22><rect fill=%22%23f0f0f0%22 width=%2280%22 height=%2280%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2215%22>👟</text></svg>'">
+      <div class="cart-item-details">
+        <div class="cart-item-name">${c.name}</div>
+        <div class="cart-item-price">₹${c.price * c.qty}</div>
+        <div class="cart-item-options">${c.color ? c.color + ' • ' : ''}Size ${c.size}</div>
+        <div class="qty-controls">
+          <button class="qty-btn-sm" onclick="changeQty(${c.id}, '${c.color}', '${c.size}', -1)">-</button>
+          <span>${c.qty}</span>
+          <button class="qty-btn-sm" onclick="changeQty(${c.id}, '${c.color}', '${c.size}', 1)">+</button>
+        </div>
+      </div>
+      <button class="remove-btn" onclick="removeFromCart(${c.id}, '${c.color}', '${c.size}')">
+        <i class="fas fa-trash"></i>
+      </button>
+    </div>
+  `).join('');
+
+  renderPriceBreakdown();
+}
+
+function renderPriceBreakdown() {
+  const subtotal = cart.reduce((sum, c) => sum + (c.price * c.qty), 0);
+  const delivery = subtotal >= 499 ? 0 : 50;
+  let discount = 0;
+
+  if (appliedCoupon) {
+    if (appliedCoupon.type === 'percent') discount = Math.round(subtotal * appliedCoupon.value / 100);
+    else discount = appliedCoupon.value;
+  }
+
+  const total = subtotal - discount + delivery;
+  const breakdown = document.getElementById('priceBreakdown');
+
+  breakdown.innerHTML = `
+    <div class="price-row"><span>Subtotal (${cart.reduce((s,c) => s+c.qty, 0)} items)</span><span>₹${subtotal}</span></div>
+    ${discount > 0 ? `<div class="price-row"><span>Coupon (${appliedCoupon.desc})</span><span class="discount">-₹${discount}</span></div>` : ''}
+    <div class="price-row"><span>Delivery</span><span>${delivery === 0 ? '<span class="discount">FREE</span>' : '₹' + delivery}</span></div>
+    <div class="price-row total"><span>Total</span><span>₹${total}</span></div>
+  `;
+
+  document.getElementById('freeDeliveryMsg').style.display = subtotal >= 499 ? 'block' : 'none';
+}
+
+function changeQty(id, color, size, delta) {
+  const item = cart.find(c => c.id === id && c.color === color && c.size === size);
+  if (item) {
+    item.qty += delta;
+    if (item.qty <= 0) removeFromCart(id, color, size);
+    else { saveCart(); updateCart(); }
+  }
+}
+
+function removeFromCart(id, color, size) {
+  cart = cart.filter(c => !(c.id === id && c.color === color && c.size === size));
+  saveCart();
+  updateCart();
+}
+
+function saveCart() {
+  localStorage.setItem('kc_cart', JSON.stringify(cart));
+}
+
+// COUPON
+function applyCoupon() {
+  const code = document.getElementById('couponInput').value.trim().toUpperCase();
+  if (!code) return showToast('Please enter a coupon code', 'error');
+
+  if (coupons[code]) {
+    appliedCoupon = coupons[code];
+    document.getElementById('couponApplied').innerHTML = `
+      <div class="coupon-applied">
+        <span><i class="fas fa-check-circle"></i> ${appliedCoupon.desc} applied!</span>
+        <span class="remove-coupon" onclick="removeCoupon()">Remove</span>
+      </div>
+    `;
+    document.getElementById('couponInput').value = '';
+    updateCart();
+    showToast(`Coupon applied! ${appliedCoupon.desc}`, 'success');
+  } else {
+    showToast('Invalid coupon code', 'error');
+  }
+}
+
+function removeCoupon() {
+  appliedCoupon = null;
+  document.getElementById('couponApplied').innerHTML = '';
+  updateCart();
+}
+
+// WISHLIST
+function toggleWishlist() {
+  document.getElementById('wishlistSidebar').classList.toggle('active');
+  document.getElementById('wishlistOverlay').classList.toggle('active');
+  renderWishlistItems();
+}
+
+function toggleWishlistItem(id) {
+  const product = products.find(p => p.id === id);
+  if (!product) return;
+
+  const exists = wishlist.find(w => w.id === id);
+  if (exists) {
+    wishlist = wishlist.filter(w => w.id !== id);
+    showToast('Removed from wishlist');
+    addNotification('wishlist', `Removed from wishlist: ${product.name}`);
+  } else {
+    wishlist.push({id: product.id, name: product.name, price: product.price, image: product.image});
+    showToast('Added to wishlist!', 'success');
+    addNotification('wishlist', `Added to wishlist: ${product.name}`);
+  }
+
+  localStorage.setItem('kc_wishlist', JSON.stringify(wishlist));
+  updateWishlist();
+  renderProducts();
+}
+
+function toggleWishlistFromPDP() {
+  if (pdpProduct) toggleWishlistItem(pdpProduct.id);
+}
+
+function updateWishlist() {
+  document.getElementById('wishlistCount').textContent = wishlist.length;
+}
+
+function renderWishlistItems() {
+  const container = document.getElementById('wishlistItems');
+
+  if (wishlist.length === 0) {
+    container.innerHTML = `
+      <div class="empty-state">
+        <i class="fas fa-heart"></i>
+        <h3>Your wishlist is empty</h3>
+        <p>Save items you love!</p>
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = wishlist.map(w => `
+    <div class="cart-item">
+      <img src="${w.image}" alt="${w.name}" class="cart-item-img" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 80 80%22><rect fill=%22%23f0f0f0%22 width=%2280%22 height=%2280%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2215%22>👟</text></svg>'">
+      <div class="cart-item-details">
+        <div class="cart-item-name">${w.name}</div>
+        <div class="cart-item-price">₹${w.price}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:8px;">
+        <button class="qty-btn-sm" onclick="moveToCart(${w.id})" title="Move to Cart"><i class="fas fa-cart-plus"></i></button>
+        <button class="remove-btn" onclick="toggleWishlistItem(${w.id})"><i class="fas fa-trash"></i></button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function moveToCart(id) {
+  const item = wishlist.find(w => w.id === id);
+  if (item) {
+    const product = products.find(p => p.id === id);
+    const cartItem = {
+      id: item.id,
+      name: item.name,
+      price: item.price,
+      image: item.image,
+      color: product?.colors?.[0]?.name || '',
+      size: product?.sizes?.[Math.floor((product?.sizes?.length || 1)/2)] || '',
+      qty: 1
+    };
+
+    const existing = cart.find(c => c.id === cartItem.id && c.color === cartItem.color && c.size === cartItem.size);
+    if (existing) existing.qty++;
+    else cart.push(cartItem);
+
+    toggleWishlistItem(id);
+    saveCart();
+    updateCart();
+    showToast(`${item.name} moved to cart!`, 'success');
+  }
+}
+
+// SEARCH
+function showSuggestions(query) {
+  const container = document.getElementById('searchSuggestions');
+  if (!query || query.length < 2) { container.classList.remove('active'); return; }
+
+  const matches = products.filter(p => p.name.toLowerCase().includes(query.toLowerCase()) || p.category.toLowerCase().includes(query.toLowerCase()));
+
+  if (matches.length === 0) { container.classList.remove('active'); return; }
+
+  container.innerHTML = matches.map(p => `
+    <div class="search-suggestion" onclick="openPDP(${p.id});hideSuggestions();">
+      <i class="fas fa-search"></i>
+      <span>${p.name}</span>
+      <span class="price">₹${p.price}</span>
+    </div>
+  `).join('');
+
+  container.classList.add('active');
+}
+
+function hideSuggestions() {
+  setTimeout(() => document.getElementById('searchSuggestions').classList.remove('active'), 200);
+}
+
+// SIDEBARS
+function toggleCart() {
+  document.getElementById('cartSidebar').classList.toggle('active');
+  document.getElementById('overlay').classList.toggle('active');
+}
+
+function toggleAdmin() {
+  if (!isLoggedIn) {
+    document.getElementById('loginModal').classList.add('active');
+    return;
+  }
+  document.getElementById('adminSidebar').classList.toggle('active');
+  document.getElementById('adminOverlay').classList.toggle('active');
+}
+
+function login() {
+  const pass = document.getElementById('password').value;
+  if (pass === ADMIN_PASS) {
+    isLoggedIn = true;
+    document.getElementById('loginModal').classList.remove('active');
+    document.getElementById('password').value = '';
+    document.getElementById('adminSidebar').classList.add('active');
+    document.getElementById('adminOverlay').classList.add('active');
+    showToast('Welcome, Ibrahim Narmawala!', 'success');
+    addNotification('admin', 'Admin logged in');
+  } else {
+    showToast('Wrong password!', 'error');
+  }
+}
+
+// ADMIN
+function renderAdminProducts() {
+  const container = document.getElementById('adminProducts');
+  container.innerHTML = products.map(p => `
+    <div class="admin-product">
+      <img src="${p.image}" alt="${p.name}" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22><rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22>👟</text></svg>'">
+      <div class="admin-product-info">
+        <div class="admin-product-name">${p.name}</div>
+        <div class="admin-product-price">₹${p.price} ${p.originalPrice ? `<span style="text-decoration:line-through;color:#999;font-size:0.75rem;">₹${p.originalPrice}</span>` : ''}</div>
+      </div>
+      <div class="admin-product-actions">
+        <button class="delete-btn" onclick="deleteProduct(${p.id})"><i class="fas fa-trash"></i></button>
+      </div>
+    </div>
+  `).join('');
+}
+
+function addProduct() {
+  const name = document.getElementById('pName').value.trim();
+  const price = document.getElementById('pPrice').value.trim();
+  const original = document.getElementById('pOriginal').value.trim();
+  const category = document.getElementById('pCategory').value;
+  const image = document.getElementById('pImage').value.trim();
+  const colors = document.getElementById('pColors').value.trim();
+  const sizes = document.getElementById('pSizes').value.trim();
+  const desc = document.getElementById('pDesc').value.trim();
+
+  if (!name || !price) return showToast('Please enter name and price', 'error');
+
+  const colorArr = colors ? colors.split(',').map(c => c.trim()) : [];
+  const sizeArr = sizes ? sizes.split(',').map(s => s.trim()) : [];
+
+  const newProduct = {
+    id: Date.now(),
+    name,
+    price: Number(price),
+    originalPrice: original ? Number(original) : 0,
+    category,
+    image: image || 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect fill=%22%232874f0%22 width=%22200%22 height=%22200%22/><text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22white%22 font-size=%2230%22>' + name.charAt(0) + '</text></svg>',
+    colors: colorArr.map((c, i) => ({name: c, hex: '#' + Math.floor(Math.random()*16777215).toString(16)})),
+    sizes: sizeArr,
+    sizeNum: sizeArr.length ? {min: parseInt(sizeArr[0]), max: parseInt(sizeArr[sizeArr.length-1])} : {min: 1, max: 5},
+    rating: 4.0 + Math.random(),
+    reviewCount: Math.floor(Math.random() * 100),
+    badges: [],
+    description: desc,
+    specs: {}
+  };
+
+  products.push(newProduct);
+  saveProducts();
+  renderProducts();
+  renderAdminProducts();
+
+  ['pName', 'pPrice', 'pOriginal', 'pImage', 'pColors', 'pSizes', 'pDesc'].forEach(id => document.getElementById(id).value = '');
+
+  showToast('Product added successfully!', 'success');
+  addNotification('admin', `Added product: ${name}`);
+}
+
+function deleteProduct(id) {
+  if (!confirm('Delete this product?')) return;
+  const product = products.find(p => p.id === id);
+  products = products.filter(p => p.id !== id);
+  saveProducts();
+  renderProducts();
+  renderAdminProducts();
+  showToast('Product deleted');
+  addNotification('admin', `Deleted product: ${product?.name || id}`);
+}
+
+function saveProducts() {
+  localStorage.setItem('kc_products', JSON.stringify(products));
+}
+
+// WHATSAPP ORDER
+function placeOrder() {
+  if (cart.length === 0) return showToast('Cart is empty!', 'error');
+
+  const subtotal = cart.reduce((sum, c) => sum + (c.price * c.qty), 0);
+  let discount = 0;
+  if (appliedCoupon) {
+    if (appliedCoupon.type === 'percent') discount = Math.round(subtotal * appliedCoupon.value / 100);
+    else discount = appliedCoupon.value;
+  }
+  const delivery = subtotal >= 499 ? 0 : 50;
+  const total = subtotal - discount + delivery;
+
+  let msg = `🛒 *New Order from Kids Choice*%0A%0A`;
+  cart.forEach(c => {
+    msg += `📦 ${c.name}%0A   Color: ${c.color || 'N/A'} | Size: ${c.size}%0A   Qty: ${c.qty} × ₹${c.price} = ₹${c.price * c.qty}%0A%0A`;
+  });
+  msg += `━━━━━━━━━━━━━━%0A`;
+  msg += `📊 *Price Details*%0A`;
+  msg += `Subtotal: ₹${subtotal}%0A`;
+  if (discount > 0) msg += `Discount (${appliedCoupon.desc}): -₹${discount}%0A`;
+  msg += `Delivery: ${delivery === 0 ? 'FREE' : '₹' + delivery}%0A`;
+  msg += `━━━━━━━━━━━━━━%0A`;
+  msg += `*Total: ₹${total}*%0A%0A`;
+  msg += `📍 *Delivery Address:*%0A_Please share your address_%0A%0A`;
+  msg += `📱 *Contact Number:*%0A_Please share your number_%0A%0A`;
+  msg += `Thank you for shopping at Kids Choice! 🙏`;
+
+  addNotification('order', `New order: ${cart.length} items totaling ₹${total}`);
+  window.open(`https://wa.me/${WHATSAPP}?text=${msg}`, '_blank');
+}
+
+// CHATBOT
+function toggleChatbot() {
+  document.getElementById('chatbotWindow').classList.toggle('active');
+  if (document.getElementById('chatbotWindow').classList.contains('active')) {
+    unreadMessages = 0;
+    document.getElementById('chatbotBtn').classList.remove('has-unread');
+    document.getElementById('chatInput').focus();
+  }
+}
+
+function toggleEmojiPicker() {
+  document.getElementById('emojiPicker').classList.toggle('active');
+}
+
+function insertEmoji(emoji) {
+  const input = document.getElementById('chatInput');
+  input.value += emoji;
+  input.focus();
+}
+
+function handleChatKey(e) {
+  if (e.key === 'Enter' && !e.shiftKey) {
+    e.preventDefault();
+    sendChatMessage();
+  }
+}
+
+function sendQuickReply(text) {
+  document.getElementById('chatInput').value = text;
+  sendChatMessage();
+}
+
+function sendChatMessage() {
+  const input = document.getElementById('chatInput');
+  const text = input.value.trim();
+  if (!text) return;
+
+  addChatMessage(text, 'user');
+  input.value = '';
+
+  setTimeout(() => {
+    const response = getBotResponse(text);
+    addChatMessage(response, 'bot');
+  }, 500 + Math.random() * 500);
+}
+
+function addChatMessage(text, sender) {
+  const container = document.getElementById('chatMessages');
+  const time = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+
+  const html = `
+    <div class="message ${sender}">
+      <div class="message-avatar"><i class="fas fa-${sender === 'bot' ? 'robot' : 'user'}"></i></div>
+      <div class="message-content">
+        ${text}
+        <div class="message-time">${time}</div>
+      </div>
+    </div>
+  `;
+
+  container.insertAdjacentHTML('beforeend', html);
+  container.scrollTop = container.scrollHeight;
+
+  if (sender === 'bot' && !document.getElementById('chatbotWindow').classList.contains('active')) {
+    unreadMessages++;
+    document.getElementById('chatbotBtn').classList.add('has-unread');
+  }
+}
+
+function getBotResponse(input) {
+  const text = input.toLowerCase();
+
+  // Greetings
+  if (/^(hi|hello|hey|help)/.test(text)) {
+    return `Hello! 👋 Welcome to Kids Choice! Your trusted kids footwear store since 2006. We serve kids from 6 months to 12 years!
+
+We have:
+👟 *Boys* - Sneakers & Shoes
+🏖️ *Boys Sandals* - Summer wear
+👠 *Girls* - Flats & Sneakers
+🏖️ *Girls Sandals* - Cute sandals
+👶 *Baby* - First walkers
+🏃 *Running Slippers* - For active kids
+🥿 *Crocs* - Cloud-like comfort
+
+✨ *Exchange anytime* - No time limit!
+✨ *Bulk orders* welcome (except school shoes)
+
+What would you like to see?`;
+  }
+
+  // Products - Boys
+  if ((text.includes('boy') || text.includes('boys')) && !text.includes('sandals')) {
+    return `For boys, we have: 👟
+
+*Sneakers:*
+• Sweet Heart Classic Sneakers - ₹849 ⭐ 4.3
+
+*Sandals:*
+• Safari Stride Boys Sandals - ₹499 ⭐ 4.4
+
+Click on any product to see more details!`;
+  }
+
+  // Products - Boys Sandals
+  if (text.includes('boys sandals') || text.includes('boys sandal')) {
+    return `Check out our boys sandals! 🏖️
+
+*Safari Stride - Boys Sandals* - ₹499 ⭐ 4.4
+Classic summer sandals with cushioned footbed.
+Available in Brown, Black, Tan
+
+Perfect for summer! Click to see more sizes.`;
+  }
+
+  // Products - Girls
+  if ((text.includes('girl') || text.includes('girls')) && !text.includes('sandals')) {
+    return `For girls, we have: 👠
+
+*Sneakers & Flats:*
+• Aqua Splash - Lightweight Sneakers (₹949) ⭐ 4.5
+• Tiny Steps - Soft Sole First Walker (₹1149) ⭐ 4.8
+
+Click on any product to see more details!`;
+  }
+
+  // Products - Girls Sandals
+  if (text.includes('girls sandals') || text.includes('girls sandal')) {
+    return `Check out our girls sandals! 🏖️
+
+*Princess Slide - Girls Sandals* - ₹549 ⭐ 4.6
+Beautiful glittery straps, perfect for parties!
+Available in Pink, Gold, Silver
+
+Click to see more options!`;
+  }
+
+  // Products - Baby
+  if (text.includes('baby')) {
+    return `For babies, we have: 👶
+
+*Baby Sandal* - ₹350 ⭐ 4.2
+Waterproof & anti-slip, perfect for monsoon!
+
+*Tiny Steps* - ₹1149 ⭐ 4.8
+Premium soft leather first walkers.
+
+Need help with sizes? We're here to help!`;
+  }
+
+  // Products - Running Slippers
+  if (text.includes('running') || text.includes('slippers')) {
+    return `Check out our running slippers! 🏃
+
+*Speed Demon - Running Slippers* - ₹399 ⭐ 4.3
+Ultra-lightweight for active kids!
+Available in Red, Blue, Green
+
+Perfect for sports and play!`;
+  }
+
+  // Products - Crocs
+  if (text.includes('crocs') || text.includes('croc')) {
+    return `Looking for Crocs? 🥿
+
+*Cloud Comfort - Kids Crocs* - ₹749 ⭐ 4.7
+Iconic comfort with pivoting straps!
+Available in Navy, Pink, Orange, Green
+
+Water-friendly and easy to clean!`;
+  }
+
+  // Price / Budget
+  if (text.includes('cheap') || text.includes('budget') || text.includes('under')) {
+    return `Looking for budget-friendly options? 💰
+
+Our affordable picks:
+• Baby Sandal - ₹350
+• Sweet Heart Sneakers - ₹849
+• Princess Flats - ₹749
+
+All our shoes are premium quality! 🏷️`;
+  }
+
+  // Best seller
+  if (text.includes('best') || text.includes('popular') || text.includes('top')) {
+    return `Our best sellers are: 🔥
+
+1. *Tiny Steps* - ⭐ 4.8 (256 reviews)
+2. *Aqua Splash* - ⭐ 4.5 (128 reviews)
+3. *Sweet Heart* - ⭐ 4.3 (89 reviews)
+
+These are loved by thousands of families!`;
+  }
+
+  // Exchange/Return
+  if (text.includes('return') || text.includes('exchange') || text.includes('refund')) {
+    return `Our return & exchange policy: 🔄
+
+✅ *Easy Exchange* - Size doesn't fit? Exchange anytime!
+✅ *100% Refund* - Size doesn't suit? Full money-back, no questions asked!
+✅ Free delivery on orders above ₹499
+
+Don't worry about getting the wrong size - we've got you covered!`;
+  }
+
+  // Delivery
+  if (text.includes('delivery') || text.includes('shipping') || text.includes('time')) {
+    return `Delivery info: 🚚
+
+• Free delivery on orders above ₹499
+• Standard delivery: 3-5 days
+• Express delivery available
+
+We deliver all over India! 📦`;
+  }
+
+  // Contact
+  if (text.includes('contact') || text.includes('call') || text.includes('phone')) {
+    return `Contact us: 📞
+
+• Phone: +91 9904873711 / 9904891866
+• WhatsApp: 919904873711
+• Store: 26 Tutorial Market, Near Teen Darwaza, Ahmedabad
+
+We're open Daily 11 AM - 8 PM (except public holidays)`;
+  }
+
+  // Store
+  if (text.includes('store') || text.includes('shop') || text.includes('address')) {
+    return `Visit our store: 📍
+
+*Kids Choice*
+26 Tutorial Market,
+Near Teen Darwaza,
+Ahmedabad
+
+🕐 Open Daily 11 AM - 8 PM
+(Except Public Holidays)
+
+Bring your kids for a free fitting! 👣`;
+  }
+
+  // Help
+  if (text.includes('help') || text.includes('?')) {
+    return `I can help you with:
+
+👟 Finding the right shoes
+💰 Prices and offers
+🚚 Delivery info
+🔄 Exchange & returns
+📍 Store location
+📞 Contact details
+
+Just ask! 😊`;
+  }
+
+  // Default
+  return `Thanks for your message! 😊
+
+I can help you with:
+• Finding shoes for boys, girls, or babies
+• Best sellers and prices
+• Delivery & return info
+• Store location
+
+What would you like to know?`;
+}
+
+// DARK MODE
+function toggleDarkMode() {
+  isDarkMode = !isDarkMode;
+  document.body.classList.toggle('dark-mode', isDarkMode);
+  localStorage.setItem('kc_darkmode', isDarkMode);
+  document.getElementById('darkModeIcon').className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+}
+
+function loadDarkMode() {
+  isDarkMode = localStorage.getItem('kc_darkmode') === 'true';
+  document.body.classList.toggle('dark-mode', isDarkMode);
+  document.getElementById('darkModeIcon').className = isDarkMode ? 'fas fa-sun' : 'fas fa-moon';
+}
+
+// TOAST
+function showToast(message, type = '') {
+  const toast = document.getElementById('toast');
+  toast.innerHTML = `<i class="fas fa-${type === 'success' ? 'check-circle' : type === 'error' ? 'exclamation-circle' : 'info-circle'}"></i> ${message}`;
+  toast.className = 'toast ' + type;
+  setTimeout(() => toast.classList.add('show'), 10);
+  setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+// KEYBOARD SHORTCUTS
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    document.getElementById('loginModal').classList.remove('active');
+    document.getElementById('cartSidebar').classList.remove('active');
+    document.getElementById('wishlistSidebar').classList.remove('active');
+    document.getElementById('adminSidebar').classList.remove('active');
+    document.getElementById('overlay').classList.remove('active');
+    document.getElementById('wishlistOverlay').classList.remove('active');
+    document.getElementById('pdpModal').classList.remove('active');
+    document.getElementById('chatbotWindow').classList.remove('active');
+  }
+});
+
+// Request notification permission on first visit
+if ('Notification' in window && Notification.permission === 'default') {
+  Notification.requestPermission();
+}
+</script>
+
+</body>
+</html>
