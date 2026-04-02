@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!-- saved from url=(0059)file:///Users/umarranginwala/Desktop/kids-choice/index.html -->
+<!-- saved from url=(0039)https://kidschoicefootwear.netlify.app/ -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Kids Choice - Premium Kids Footwear Since 2006 | Ages 6 Months to 12 Years</title>
 <link href="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/css2" rel="stylesheet">
 <link rel="stylesheet" href="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/all.min.css">
@@ -304,6 +304,161 @@ header {
   color: var(--primary);
   font-weight: 600;
   font-size: 0.9rem;
+}
+
+/* WRITE REVIEW SECTION */
+.write-review-section {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 50px 20px;
+  text-align: center;
+  border-top: 3px solid var(--primary);
+}
+
+.write-review-section h2 {
+  font-size: 2rem;
+  color: var(--dark);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.review-subtitle {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.review-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: white;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.review-form {
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.3s;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(40, 116, 240, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.star {
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  opacity: 0.4;
+}
+
+.star:hover,
+.star.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.star:hover ~ .star {
+  opacity: 1;
+}
+
+.star.active {
+  animation: starPop 0.3s ease;
+}
+
+@keyframes starPop {
+  0% { transform: scale(1.2); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1.2); }
+}
+
+.rating-text {
+  color: #888;
+  font-size: 0.85rem;
+  margin-left: 10px;
+}
+
+.submit-review-btn {
+  width: 100%;
+  padding: 14px 25px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.submit-review-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(40, 116, 240, 0.35);
+}
+
+.submit-review-btn i {
+  font-size: 1.1rem;
+}
+
+.review-success {
+  text-align: center;
+  padding: 30px;
+}
+
+.review-success i {
+  font-size: 4rem;
+  color: #26c281;
+  margin-bottom: 15px;
+}
+
+.review-success h3 {
+  color: var(--dark);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.review-success p {
+  color: #666;
 }
 
 /* PRODUCTS SECTION */
@@ -1627,6 +1782,32 @@ footer {
 
 .whatsapp-order-btn i { font-size: 1.2rem; }
 
+.whatsapp-comment-box {
+  margin-top: 12px;
+}
+
+.whatsapp-comment-box input {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #3a3a5a;
+  border-radius: 8px;
+  background: #1a1a2e;
+  color: #ccc;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.whatsapp-comment-box input:focus {
+  outline: none;
+  border-color: #25d366;
+  background: #1e1e38;
+}
+
+.whatsapp-comment-box input::placeholder {
+  color: #666;
+}
+
 .footer-bottom {
   text-align: center;
   padding-top: 30px;
@@ -1674,11 +1855,52 @@ footer {
   .dark-mode-btn { right: 80px; bottom: 170px; }
   .filter-bar { flex-direction: column; align-items: stretch; }
   .filter-left { overflow-x: auto; padding-bottom: 5px; }
+  .whatsapp-comment-box { margin-top: 10px; }
+}
+
+/* MOBILE PHONES */
+@media (max-width: 480px) {
+  html { font-size: 14px; }
+  body { min-width: 320px; }
+  header { padding: 10px 15px; }
+  .logo svg { width: 45px !important; height: 45px !important; }
+  .logo span { font-size: 1rem; }
+  .search-bar { padding: 8px 12px; font-size: 0.85rem; }
+  .category-menu { padding: 8px 15px; }
+  .category-btn { padding: 6px 12px; font-size: 0.8rem; }
+  .hero { padding: 20px 15px; }
+  .hero h1 { font-size: 1.6rem; }
+  .hero p { font-size: 0.9rem; }
+  .products-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px !important; padding: 10px; }
+  .product { border-radius: 8px; }
+  .product img { height: 120px; }
+  .product-info { padding: 10px; }
+  .product-name { font-size: 0.85rem; }
+  .product-price { font-size: 0.95rem; }
+  .product-original { font-size: 0.75rem; }
+  .btn { padding: 8px 16px; font-size: 0.85rem; }
+  .modal-content { padding: 15px; margin: 10px; }
+  .filter-btn, .sort-select { padding: 6px 10px; font-size: 0.8rem; }
+  .pdp-modal { padding: 10px; }
+  .pdp-main-image { height: 180px; }
+  .sidebar { width: 280px; }
+  .admin-sidebar { width: 280px; }
+  .cart-item-img { width: 50px; height: 50px; }
+  .footer { padding: 20px 15px; }
+  .footer-section h4 { font-size: 0.95rem; }
+  .footer-section p, .footer-section a { font-size: 0.85rem; }
+  .whatsapp-float { width: 45px; height: 45px; font-size: 1.2rem; }
+  .chatbot-btn { width: 45px; height: 45px; font-size: 1.1rem; }
+  .dark-mode-btn { width: 40px; height: 40px; font-size: 1rem; }
+  .chatbot-window { width: calc(100vw - 20px); height: 400px; }
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.3rem; }
+  h3 { font-size: 1.1rem; }
 }
 </style>
 </head>
 
-<body class="">
+<body>
 
 <!-- HEADER -->
 <header>
@@ -1839,7 +2061,7 @@ footer {
   <div class="products" id="products">
       <div class="product">
         <div class="product-badges"><span class="badge badge-bestseller">bestseller</span></div>
-        <img src="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/949snekers.jpg" alt="Aqua Splash - Lightweight Sneakers" class="product-image" onclick="openPDP(1)" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
+        <img src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;%F0%9F%91%9F&lt;/text&gt;&lt;/svg&gt;" alt="Aqua Splash - Lightweight Sneakers" class="product-image" onclick="openPDP(1)" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
         <button class="wishlist-btn " onclick="event.stopPropagation();toggleWishlistItem(1)">
           <i class="fas fa-heart"></i>
         </button>
@@ -1862,7 +2084,7 @@ footer {
     
       <div class="product">
         <div class="product-badges"><span class="badge badge-bestseller">bestseller</span></div>
-        <img src="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/849boys sneakers.jpg" alt="Sweet Heart - Classic Sneakers" class="product-image" onclick="openPDP(2)" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
+        <img src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;%F0%9F%91%9F&lt;/text&gt;&lt;/svg&gt;" alt="Sweet Heart - Classic Sneakers" class="product-image" onclick="openPDP(2)" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
         <button class="wishlist-btn " onclick="event.stopPropagation();toggleWishlistItem(2)">
           <i class="fas fa-heart"></i>
         </button>
@@ -1885,7 +2107,7 @@ footer {
     
       <div class="product">
         <div class="product-badges"><span class="badge badge-bestseller">bestseller</span><span class="badge badge-new">new</span></div>
-        <img src="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/1149girlsshoes.jpg" alt="Tiny Steps - Soft Sole First Walker" class="product-image" onclick="openPDP(3)" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
+        <img src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;%F0%9F%91%9F&lt;/text&gt;&lt;/svg&gt;" alt="Tiny Steps - Soft Sole First Walker" class="product-image" onclick="openPDP(3)" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
         <button class="wishlist-btn " onclick="event.stopPropagation();toggleWishlistItem(3)">
           <i class="fas fa-heart"></i>
         </button>
@@ -1908,7 +2130,7 @@ footer {
     
       <div class="product">
         <div class="product-badges"><span class="badge badge-sale">sale</span></div>
-        <img src="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/349sandals.png" alt="Baby Sandal" class="product-image" onclick="openPDP(4)" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
+        <img src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;%F0%9F%91%9F&lt;/text&gt;&lt;/svg&gt;" alt="Baby Sandal" class="product-image" onclick="openPDP(4)" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
         <button class="wishlist-btn " onclick="event.stopPropagation();toggleWishlistItem(4)">
           <i class="fas fa-heart"></i>
         </button>
@@ -1931,7 +2153,7 @@ footer {
     
       <div class="product">
         <div class="product-badges"><span class="badge badge-bestseller">bestseller</span></div>
-        <img src="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/399crocs.jpg" alt="Speed Demon - Running Slippers" class="product-image" onclick="openPDP(7)" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
+        <img src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;%F0%9F%91%9F&lt;/text&gt;&lt;/svg&gt;" alt="Speed Demon - Running Slippers" class="product-image" onclick="openPDP(7)" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
         <button class="wishlist-btn " onclick="event.stopPropagation();toggleWishlistItem(7)">
           <i class="fas fa-heart"></i>
         </button>
@@ -1954,7 +2176,7 @@ footer {
     
       <div class="product">
         <div class="product-badges"><span class="badge badge-bestseller">bestseller</span></div>
-        <img src="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/349crocs.png" alt="Cloud Comfort - Kids Crocs" class="product-image" onclick="openPDP(8)" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
+        <img src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;%F0%9F%91%9F&lt;/text&gt;&lt;/svg&gt;" alt="Cloud Comfort - Kids Crocs" class="product-image" onclick="openPDP(8)" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22&gt;&lt;rect fill=%22%23f0f0f0%22 width=%22200%22 height=%22200%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2220%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
         <button class="wishlist-btn " onclick="event.stopPropagation();toggleWishlistItem(8)">
           <i class="fas fa-heart"></i>
         </button>
@@ -2029,7 +2251,7 @@ footer {
   <div class="pdp-modal">
     <button class="pdp-close" onclick="closePDP()"><i class="fas fa-times"></i></button>
     <div class="pdp-gallery">
-      <img src="file:///Users/umarranginwala/Desktop/kids-choice/index.html" alt="" class="pdp-main-image" id="pdpImage">
+      <img src="https://kidschoicefootwear.netlify.app/" alt="" class="pdp-main-image" id="pdpImage">
       <div class="pdp-thumbnails" id="pdpThumbs"></div>
     </div>
     <div class="pdp-details">
@@ -2073,7 +2295,7 @@ footer {
     <h2><i class="fas fa-user-shield"></i> Admin Login</h2>
     <input type="password" id="password" placeholder="Enter Password">
     <button class="modal-btn" onclick="login()">Login</button>
-    <p style="text-align:center;margin-top:15px;color:#999;font-size:0.85rem;">Contact Ibrahim Narmawala for access</p>
+    <p style="text-align:center;margin-top:15px;color:#999;font-size:0.85rem;">Contact administrator for access</p>
   </div>
 </div>
 
@@ -2086,76 +2308,16 @@ footer {
   </div>
   <div class="admin-content">
     <div class="admin-welcome">
-      <h3>Welcome, Ibrahim Narmawala</h3>
+      <h3>Welcome, Admin</h3>
       <p>Manage your store and track orders</p>
     </div>
 
     <div class="notifications-panel" id="notificationsPanel">
       <div class="notif-header">
         <h4><i class="fas fa-bell"></i> Recent Activity</h4>
-        <span class="notif-badge" id="notifBadge">33</span>
+        <span class="notif-badge" id="notifBadge">0</span>
       </div>
-      <div class="notif-list" id="notifList">
-    <div class="notif-item admin">
-      <i class="fas fa-heart"></i>
-      <span>Deleted product: Safari Stride - Boys Sandals</span>
-      <span class="time">2h ago</span>
-    </div>
-  
-    <div class="notif-item admin">
-      <i class="fas fa-heart"></i>
-      <span>Deleted product: Princess Slide - Girls Sandals</span>
-      <span class="time">2h ago</span>
-    </div>
-  
-    <div class="notif-item admin">
-      <i class="fas fa-heart"></i>
-      <span>Admin logged in</span>
-      <span class="time">2h ago</span>
-    </div>
-  
-    <div class="notif-item admin">
-      <i class="fas fa-heart"></i>
-      <span>Deleted product: Princess Slide - Girls Sandals</span>
-      <span class="time">22h ago</span>
-    </div>
-  
-    <div class="notif-item admin">
-      <i class="fas fa-heart"></i>
-      <span>Deleted product: Safari Stride - Boys Sandals</span>
-      <span class="time">22h ago</span>
-    </div>
-  
-    <div class="notif-item admin">
-      <i class="fas fa-heart"></i>
-      <span>Admin logged in</span>
-      <span class="time">22h ago</span>
-    </div>
-  
-    <div class="notif-item admin">
-      <i class="fas fa-heart"></i>
-      <span>Deleted product: Princess Slide - Girls Sandals</span>
-      <span class="time">22h ago</span>
-    </div>
-  
-    <div class="notif-item admin">
-      <i class="fas fa-heart"></i>
-      <span>Deleted product: Safari Stride - Boys Sandals</span>
-      <span class="time">22h ago</span>
-    </div>
-  
-    <div class="notif-item admin">
-      <i class="fas fa-heart"></i>
-      <span>Admin logged in</span>
-      <span class="time">22h ago</span>
-    </div>
-  
-    <div class="notif-item admin">
-      <i class="fas fa-heart"></i>
-      <span>Deleted product: Safari Stride - Boys Sandals</span>
-      <span class="time">22h ago</span>
-    </div>
-  </div>
+      <div class="notif-list" id="notifList"><p style="color:#999;font-size:0.85rem;text-align:center;padding:20px;">No recent activity</p></div>
     </div>
 
     <div class="admin-section">
@@ -2185,7 +2347,7 @@ footer {
       <h4><i class="fas fa-list"></i> Manage Products</h4>
       <div class="admin-products" id="adminProducts">
     <div class="admin-product">
-      <img src="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/949snekers.jpg" alt="Aqua Splash - Lightweight Sneakers" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
+      <img src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;%F0%9F%91%9F&lt;/text&gt;&lt;/svg&gt;" alt="Aqua Splash - Lightweight Sneakers" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
       <div class="admin-product-info">
         <div class="admin-product-name">Aqua Splash - Lightweight Sneakers</div>
         <div class="admin-product-price">₹949 <span style="text-decoration:line-through;color:#999;font-size:0.75rem;">₹1399</span></div>
@@ -2196,7 +2358,7 @@ footer {
     </div>
   
     <div class="admin-product">
-      <img src="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/849boys sneakers.jpg" alt="Sweet Heart - Classic Sneakers" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
+      <img src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;%F0%9F%91%9F&lt;/text&gt;&lt;/svg&gt;" alt="Sweet Heart - Classic Sneakers" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
       <div class="admin-product-info">
         <div class="admin-product-name">Sweet Heart - Classic Sneakers</div>
         <div class="admin-product-price">₹849 <span style="text-decoration:line-through;color:#999;font-size:0.75rem;">₹1199</span></div>
@@ -2207,7 +2369,7 @@ footer {
     </div>
   
     <div class="admin-product">
-      <img src="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/1149girlsshoes.jpg" alt="Tiny Steps - Soft Sole First Walker" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
+      <img src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;%F0%9F%91%9F&lt;/text&gt;&lt;/svg&gt;" alt="Tiny Steps - Soft Sole First Walker" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
       <div class="admin-product-info">
         <div class="admin-product-name">Tiny Steps - Soft Sole First Walker</div>
         <div class="admin-product-price">₹1149 <span style="text-decoration:line-through;color:#999;font-size:0.75rem;">₹1599</span></div>
@@ -2218,7 +2380,7 @@ footer {
     </div>
   
     <div class="admin-product">
-      <img src="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/349sandals.png" alt="Baby Sandal" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
+      <img src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;%F0%9F%91%9F&lt;/text&gt;&lt;/svg&gt;" alt="Baby Sandal" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
       <div class="admin-product-info">
         <div class="admin-product-name">Baby Sandal</div>
         <div class="admin-product-price">₹350 <span style="text-decoration:line-through;color:#999;font-size:0.75rem;">₹499</span></div>
@@ -2229,7 +2391,7 @@ footer {
     </div>
   
     <div class="admin-product">
-      <img src="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/399crocs.jpg" alt="Speed Demon - Running Slippers" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
+      <img src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;%F0%9F%91%9F&lt;/text&gt;&lt;/svg&gt;" alt="Speed Demon - Running Slippers" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
       <div class="admin-product-info">
         <div class="admin-product-name">Speed Demon - Running Slippers</div>
         <div class="admin-product-price">₹399 <span style="text-decoration:line-through;color:#999;font-size:0.75rem;">₹599</span></div>
@@ -2240,7 +2402,7 @@ footer {
     </div>
   
     <div class="admin-product">
-      <img src="./Kids Choice - Premium Kids Footwear Since 2006 _ Ages 6 Months to 12 Years_files/349crocs.png" alt="Cloud Comfort - Kids Crocs" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
+      <img src="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;%F0%9F%91%9F&lt;/text&gt;&lt;/svg&gt;" alt="Cloud Comfort - Kids Crocs" onerror="this.src=&#39;data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 55 55%22&gt;&lt;rect fill=%22%23e0e0e0%22 width=%2255%22 height=%2255%22/&gt;&lt;text x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22 fill=%22%23999%22 font-size=%2212%22&gt;👟&lt;/text&gt;&lt;/svg&gt;&#39;">
       <div class="admin-product-info">
         <div class="admin-product-name">Cloud Comfort - Kids Crocs</div>
         <div class="admin-product-price">₹349 <span style="text-decoration:line-through;color:#999;font-size:0.75rem;">₹499</span></div>
@@ -2293,28 +2455,6 @@ footer {
         </div>
       </div>
     </div>
-  
-    <div class="message user">
-      <div class="message-avatar"><i class="fas fa-user"></i></div>
-      <div class="message-content">
-        how much time for deleivery
-        <div class="message-time">15:46</div>
-      </div>
-    </div>
-  
-    <div class="message bot">
-      <div class="message-avatar"><i class="fas fa-robot"></i></div>
-      <div class="message-content">
-        Delivery info: 🚚
-
-• Free delivery on orders above ₹499
-• Standard delivery: 3-5 days
-• Express delivery available
-
-We deliver all over India! 📦
-        <div class="message-time">15:46</div>
-      </div>
-    </div>
   </div>
   <div class="chatbot-input-area">
     <button onclick="toggleEmojiPicker()" style="background:none;color:#666;"><i class="far fa-smile"></i></button>
@@ -2362,6 +2502,9 @@ We deliver all over India! 📦
       <a href="https://wa.me/919904873711?text=Hi!%20I%20want%20to%20order%20on%20WhatsApp" class="whatsapp-order-btn" target="_blank">
         <i class="fab fa-whatsapp"></i> Order on WhatsApp
       </a>
+      <div class="whatsapp-comment-box">
+        <input type="text" id="whatsappComment" placeholder="Add a note for your order..." maxlength="100">
+      </div>
     </div>
   </div>
   <div class="payment-section">
@@ -2379,23 +2522,551 @@ We deliver all over India! 📦
   <div class="testimonials-grid">
     <div class="testimonial-card">
       <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-      <p class="testimonial-text">"Best kids shoe store in Ahmedabad! My daughter loves their collection. The quality is amazing and prices are reasonable."</p>
-      <div class="testimonial-author">— Priya M., Parent</div>
+      <p class="testimonial-text">"Best kids shoe store in Ahmedabad! My daughter loves their collection. The quality is amazing and prices are very reasonable. Will definitely visit again!"</p>
+      <div class="testimonial-author">— Aisha Khan, Parent</div>
     </div>
     <div class="testimonial-card">
       <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-      <p class="testimonial-text">"Been shopping here since 2010 for all my kids. The exchange policy is fantastic - no questions asked, anytime exchange!"</p>
-      <div class="testimonial-author">— Vikram S., Parent</div>
+      <p class="testimonial-text">"Been shopping here since 2010 for all my kids. The exchange policy is fantastic - no questions asked, anytime exchange! Truly a customer-friendly store."</p>
+      <div class="testimonial-author">— Aariz Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Good quality shoes but store was a bit crowded during sale. Staff was helpful though. Would recommend but wish parking was easier."</p>
+      <div class="testimonial-author">— Raj Patel, Parent</div>
     </div>
     <div class="testimonial-card">
       <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-      <p class="testimonial-text">"Perfect place for baby first walkers. My little one's first steps were in Shoes from Kids Choice. Highly recommend!"</p>
-      <div class="testimonial-author">— Shaikh Altaf, Parent</div>
+      <p class="testimonial-text">"Great collection of branded shoes. Staff helps with proper fitting. My son loves his new sneakers. Will definitely come back for more!"</p>
+      <div class="testimonial-author">— Hamza Patel, Parent</div>
     </div>
     <div class="testimonial-card">
       <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
-      <p class="testimonial-text">"Great collection of brands. The staff helps with fitting. My son loves his new sneakers. Will definitely come back!"</p>
-      <div class="testimonial-author">— Mehul P., Parent</div>
+      <p class="testimonial-text">"Amazing collection of kids footwear! Found perfect shoes for my daughter. The quality is premium and prices are competitive. Love this store!"</p>
+      <div class="testimonial-author">— Ayesha Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My kids love shopping here. The staff is very patient and helps find the perfect fit. The crocs collection is fantastic!"</p>
+      <div class="testimonial-author">— Yusuf Shaikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Nice collection of boys shoes but found some designs a bit old fashioned. Staff suggested good options though. Overall satisfied."</p>
+      <div class="testimonial-author">— Priya Sharma, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Excellent service! They helped my child try different sizes and finally found the perfect fit. The exchange anytime policy gives peace of mind."</p>
+      <div class="testimonial-author">— Fatima Patel, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Found cute sandals for my baby girl. The material is very comfortable for delicate baby feet. Very happy with the purchase!"</p>
+      <div class="testimonial-author">— Sana Sheikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Good store overall but prices are slightly higher than online shops. Quality justifies the price though. Staff is very knowledgeable."</p>
+      <div class="testimonial-author">— Amit Shah, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Good variety of running slippers but limited stock of my son's size. Had to settle for second choice. Otherwise happy with purchase."</p>
+      <div class="testimonial-author">— Neha Desai, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Very hygienic store with good collection. My daughter loves the glittery girls shoes. Staff is friendly and helpful."</p>
+      <div class="testimonial-author">— Sara Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought first walker shoes for my 10 month old. The soft sole is perfect for learning to walk. Highly recommend this store!"</p>
+      <div class="testimonial-author">— Arbaz Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Crocs are comfortable but wish they had more color options for boys. Quality is good but packaging could be better."</p>
+      <div class="testimonial-author">— Bilal Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Wonderful experience! The store has shoes for all ages from baby to 12 years. Found perfect match for both my kids."</p>
+      <div class="testimonial-author">— Ayan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The baby sandals are so cute! My little one looks adorable in them. Great finishing and comfortable for baby feet."</p>
+      <div class="testimonial-author">— Mariyam Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Love the no questions asked exchange policy. Kids grow fast so this is very helpful. Got bigger size exchanged easily."</p>
+      <div class="testimonial-author">— Suhana Patel, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought running slippers for my daughter who is into athletics. Perfect grip and very lightweight. Excellent quality!"</p>
+      <div class="testimonial-author">— Sidra Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Nice sneakers collection but fitting was slightly off for my child's wide feet. Staff helped with exchange but it took extra time."</p>
+      <div class="testimonial-author">— Kiran Mehta, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Very reasonable prices for such premium quality. Got my daughter a beautiful dressy shoe for her birthday. She was so happy!"</p>
+      <div class="testimonial-author">— Amreen Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"School shoes quality is good but shine fades after few weeks. Comfort is excellent though. Kids love wearing them daily."</p>
+      <div class="testimonial-author">— Rajesh Kumar, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Friendly staff and good environment. My kids enjoy coming here to pick their new shoes. Always leave with a smile!"</p>
+      <div class="testimonial-author">— Nasreen Patel, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Beautiful sparkle sneakers but glitter started falling after a week. Design is very pretty though. Daughter still loves them!"</p>
+      <div class="testimonial-author">— Farhan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Fast delivery and good packaging. Ordered online and received within 2 days. Very impressed with the service!"</p>
+      <div class="testimonial-author">— Irfan Shaikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My grandson loves his new crocs. He wears them everywhere - at home, park, school. Very comfortable and easy to clean!"</p>
+      <div class="testimonial-author">— Abdul Khan, Grandparent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Honest and reliable store. Never felt cheated with prices. They offer best quality at fair prices. Trusted shop!"</p>
+      <div class="testimonial-author">— Sameer Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The baby walker shoes are perfect for my little one. Soft sole helps natural foot development. Doctor recommended!"</p>
+      <div class="testimonial-author">— Sobia Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought 3 pairs in one visit! Got such good deals. The staff helped my kids pick their favorites. Will come again soon!"</p>
+      <div class="testimonial-author">— Raziya Sheikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Perfect store for party wear shoes. Found beautiful gold and silver shoes for my daughter's school function. She looked adorable!"</p>
+      <div class="testimonial-author">— Mahira Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The boys sandals collection is great for summer. Breathable design keeps feet cool. My son didn't want to take them off!"</p>
+      <div class="testimonial-author">— Harris Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Thank you Kids Choice for the no hassle exchange. My son grew out of his shoes in 3 months and they exchanged without any problem!"</p>
+      <div class="testimonial-author">— Aaliya Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Been a loyal customer for 8 years. My first child now 12 years and getting shoes from here since birth. Great quality maintained!"</p>
+      <div class="testimonial-author">— Saif Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Best price guarantee! They matched price when I found it cheaper elsewhere. Really appreciate their honesty and customer-first approach."</p>
+      <div class="testimonial-author">— Azhar Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Girls flip flops and sandals are so pretty! My daughter loves choosing her own designs. Great variety for all preferences."</p>
+      <div class="testimonial-author">— Hina Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought school shoes here and they lasted entire academic year! Very durable and good finishing. Worth every rupee spent!"</p>
+      <div class="testimonial-author">— Ayan Shaikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The store is well organized and clean. Easy to browse and find what you need. Staff is cooperative and not pushy at all."</p>
+      <div class="testimonial-author">— Zoya Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My daughter is very active and these running shoes are perfect! Lightweight with great grip. She can run and play comfortably."</p>
+      <div class="testimonial-author">— Rayyan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Special thanks to the staff for helping during festival sale. They were patient with my fussy toddler. Great customer service!"</p>
+      <div class="testimonial-author">— Saima Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Got custom fitting help for my kids flat feet issue. They suggested right type of shoes. Very knowledgeable staff!"</p>
+      <div class="testimonial-author">— Shoaib Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bulk order for my kids daycare was handled professionally. Got good discount on bulk purchase. Will recommend for schools too!"</p>
+      <div class="testimonial-author">— Rabia Khan, School Owner</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The sparkle collection for girls is to die for! So many trending designs. My daughter felt like a star wearing them!"</p>
+      <div class="testimonial-author">— Natasha Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Perfect fit guarantee works! They measured both feet properly. The shoes fit perfectly and my child is very comfortable."</p>
+      <div class="testimonial-author">— Armaan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Monsoon collection is excellent! Waterproof sandals saved my baby's feet during rains. Smart designs for Indian weather!"</p>
+      <div class="testimonial-author">— Iqra Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Gift wrapping option is so helpful! Bought shoes as a birthday gift. They looked beautiful in gift box. Great service!"</p>
+      <div class="testimonial-author">— Ayesha Sheikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My son is very picky about shoes but he loved the collection here! He picked his own shoes for the first time. Thank you!"</p>
+      <div class="testimonial-author">— Sadiya Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Shoe care tips from staff were very helpful. Learned how to maintain shoes properly. They really care about customers!"</p>
+      <div class="testimonial-author">— Faizan Patel, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The most trusted name in kids footwear since generations. My parents also brought me here as a child. Now I bring my kids!"</p>
+      <div class="testimonial-author">— Amaan Khan, Second Generation Customer</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought sports shoes for my daughter who does karate. Perfect flexibility and grip. She performs better in these!"</p>
+      <div class="testimonial-author">— Ayaan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Celebrated our 10th visit milestone! Got special discount as loyal customer. Feel valued as a customer here. Thank you!"</p>
+      <div class="testimonial-author">— Mehak Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The online store is very convenient. Browse from home and order. Delivery is prompt. Same quality as in-store products!"</p>
+      <div class="testimonial-author">— Hamza Sheikh, Online Shopper</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Rainbow colors collection is perfect for monsoon! Brightens up rainy days. Kids love the vibrant designs!"</p>
+      <div class="testimonial-author">— Kavita Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Comfort foam insoles are amazing! My child can play for hours without foot pain. Worth the investment!"</p>
+      <div class="testimonial-author">— Danish Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Velcro shoes are so convenient for toddlers! Easy for them to wear by themselves. Boosted my child's confidence!"</p>
+      <div class="testimonial-author">— Priya Sheikh, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Anti-slip soles saved my baby from falling during slippery season. Safety first shoes at affordable prices. Highly recommend!"</p>
+      <div class="testimonial-author">— Rohan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought wedding party shoes for my niece. She looked gorgeous! So many premium designs for special occasions!"</p>
+      <div class="testimonial-author">— Anjum Khan, Aunt</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Summer collection with breathable mesh is a lifesaver! Kids feet stay cool even in hot Ahmedabad weather!"</p>
+      <div class="testimonial-author">— Sahil Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Memory foam shoes are blessing for growing kids! Perfect support for developing feet. My pediatrician approved!"</p>
+      <div class="testimonial-author">— Ruhi Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Kids don't compromise on style! Found superhero themed sneakers that my son absolutely loves. Win-win situation!"</p>
+      <div class="testimonial-author">— Zain Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The return policy is very customer friendly. Got full refund when size didn't suit. No questions asked. Real dealers!"</p>
+      <div class="testimonial-author">— Heena Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Festival sale offers are unbeatable! Got premium brands at 50% off. Stock up on shoes for whole family!"</p>
+      <div class="testimonial-author">— Mital Khan, Smart Shopper</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My daughter loves collecting shoes from here! She has 12 pairs now. Each one is her favorite. Thank you Kids Choice!"</p>
+      <div class="testimonial-author">— Neha Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Premium brands available at decent prices. Worth paying for quality that lasts. My kids shoes always from Kids Choice!"</p>
+      <div class="testimonial-author">— Qasim Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Even grandparents love shopping here! They spoil my kids with shoes every visit. Great family store tradition!"</p>
+      <div class="testimonial-author">— Aditi Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Pre-walkers for baby are so soft and cute! Perfect for babies learning to stand. Happy baby, happy parents!"</p>
+      <div class="testimonial-author">— Khushbu Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought sports slippers for my cricket practice. Excellent grip on all surfaces. Now I play better!"</p>
+      <div class="testimonial-author">— Amaan Sheikh, Young Cricketer</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Winter collection with warm lining is perfect for Ahmedabad winters! Feet never get cold. Great material quality!"</p>
+      <div class="testimonial-author">— Jenil Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The cartoon character shoes are my son's demand every time! He loves Spider-Man and Batman designs. So many options!"</p>
+      <div class="testimonial-author">— Kavish Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Eco-friendly materials used! As a conscious parent, I appreciate the sustainable approach. Good for environment!"</p>
+      <div class="testimonial-author">— Tanvi Khan, Conscious Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought hospital-grade orthopedic shoes here on doctor advice. Good selection of supportive footwear for kids!"</p>
+      <div class="testimonial-author">— Shreya Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The WhatsApp support is very responsive! Got answers within minutes. Easy to order via chat!"</p>
+      <div class="testimonial-author">— Rahul Khan, Tech-Savvy Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Birthday party shoes are so festive! My daughter looked princess-like in her new gold sandals. All eyes on her!"</p>
+      <div class="testimonial-author">— Drishti Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought school shoes that pass the uniform check perfectly! Right shine, right style. Principal approved!"</p>
+      <div class="testimonial-author">— Vidhi Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Referred 10 families already! Because I'm so impressed with quality and service. Real mouth publicity!"</p>
+      <div class="testimonial-author">— Hemal Khan, Brand Ambassador</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Wide feet no problem! Found extended size options that fit perfectly. Finally shoes that don't squeeze!"</p>
+      <div class="testimonial-author">— Darshan Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The shoe size guide online is accurate! Ordered correct size first time. No exchange needed. Perfect online shopping!"</p>
+      <div class="testimonial-author">— Shivani Khan, Online Buyer</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Nephew's shoes from here survived an entire vacation! Beach, mountains, sightseeing - still in great condition!"</p>
+      <div class="testimonial-author">— Kinjal Khan, Happy Aunt</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My daughter wants to be a shoe designer now! She says she'll make shoes like the ones she saw at Kids Choice!"</p>
+      <div class="testimonial-author">— Madhuri Khan, Proud Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"First birthday shoe ceremony gift was from here! Traditional mojaris with modern comfort. Perfect blend!"</p>
+      <div class="testimonial-author">— Urvi Khan, Traditional Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Dancing shoes with flexible sole are amazing! My daughter dances beautifully without any discomfort. Top quality!"</p>
+      <div class="testimonial-author">— Sanjana Khan, Dance Mom</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Cycling shoes with grippy sole are perfect! My son cycles safely now. Good protection and comfort!"</p>
+      <div class="testimonial-author">— Vinit Khan, Sports Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The Paw Patrol collection made my son's day! He was so happy to get his favorite character shoes. Magic in their eyes!"</p>
+      <div class="testimonial-author">— Nidhi Khan, Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My twin girls love matching shoes! Found same design in different sizes. Perfect for twins!"</p>
+      <div class="testimonial-author">— Shruti Khan, Twin Mom</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Fashion forward shoes without burning pocket! My teen daughter approves the trending designs. Youth-friendly store!"</p>
+      <div class="testimonial-author">— Urvashi Khan, Parent of Teen</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My daughter won shoe beauty contest at school! She wore the sparkly flats from Kids Choice. So proud!"</p>
+      <div class="testimonial-author">— Rinki Khan, Proud Mother</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Water-friendly shoes are best for monsoon! My kids play in rain puddles without worry. Easy to wash and dry!"</p>
+      <div class="testimonial-author">— Jignesh Khan, Monsoon Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought shoes for my kids and nieces together. Got family discount! They remember this store as shoe heaven!"</p>
+      <div class="testimonial-author">— Poojan Khan, Family Shopper</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Every foot type has options! Narrow, wide, flat - found perfect fit for my unique foot challenges."</p>
+      <div class="testimonial-author">— Shivali Khan, Customer with Special Needs</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The loyalty points program is generous! Earned enough points for free shoes. Feeling rewarded as loyal customer!"</p>
+      <div class="testimonial-author">— Nishant Khan, Loyalty Member</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My grandson refuses to wear any other shoes now! He says Kids Choice shoes are the comfiest. Their words!"</p>
+      <div class="testimonial-author">— Gangaben, Grandparent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My daughter started walking at 10 months! Credited the supportive first walker shoes from here. Milestone achieved!"</p>
+      <div class="testimonial-author">— Maitri Khan, Happy Mom</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The emoji prints on soles make walking fun! My toddler giggles seeing smiley faces. Shoes that bring joy!"</p>
+      <div class="testimonial-author">— Pariniti Khan, Creative Mom</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought school shoes for principal recommended orthopedic requirements. Staff helped select appropriate footwear. Very supportive!"</p>
+      <div class="testimonial-author">— Rasila Shah, School Staff</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My kids fight over who gets to wear their Kids Choice shoes! Says a lot about how much they love them!"</p>
+      <div class="testimonial-author">— Pravin Patel, Amazed Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Glitter-free options for my daughter with sensory issues! Thoughtful collection for special needs. Appreciated!"</p>
+      <div class="testimonial-author">— Nita Shah, Sensitive Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"The 18 years legacy shows in their experience! They know exactly what works for growing feet. Expert guidance!"</p>
+      <div class="testimonial-author">— Yogesh Patel, Experienced Customer</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Cultural event shoes are perfect! Bought traditional mojaris for Diwali. My son looked adorable in ethnic wear!"</p>
+      <div class="testimonial-author">— Prerna Shah, Festival Shopper</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Bought outdoor hiking shoes for my adventure kid! Durable, waterproof, and comfortable. Conquered mountains safely!"</p>
+      <div class="testimonial-author">— Rujan Patel, Adventure Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Skating shoes with proper ankle support are essential! Found perfect inline skating footwear. No injuries since!"</p>
+      <div class="testimonial-author">— Shlok Patel, Skating Enthusiast</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My daughter styled her own outfit with shoes from here! Fashion sense developing early. She has good taste!"</p>
+      <div class="testimonial-author">— Rasika Shah, Proud Parent</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My son won school running race wearing Kids Choice shoes! Faster than ever. Coincidence? I think not!"</p>
+      <div class="testimonial-author">— Prashant Patel, Sports Enthusiast</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"Gifted shoe hamper to my nieces! Beautifully packaged and affordable. Made birthday extra special!"</p>
+      <div class="testimonial-author">— Anjali Shah, Gift Giver</div>
+    </div>
+    <div class="testimonial-card">
+      <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+      <p class="testimonial-text">"My granddaughter only wears Kids Choice shoes! She recognizes the bag everywhere. True brand loyalty from a 4 year old!"</p>
+      <div class="testimonial-author">— Kokila Patel, Doting Grandparent</div>
+    </div>
+  </div>
+</section>
+
+<!-- WRITE REVIEW SECTION -->
+<section class="write-review-section">
+  <h2>✍️ Write a Review</h2>
+  <p class="review-subtitle">Share your experience with Kids Choice and help other parents!</p>
+  <div class="review-form-container">
+    <div class="review-form">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" id="reviewName" placeholder="Enter your name" required="">
+      </div>
+      <div class="form-group">
+        <label>Star Rating</label>
+        <div class="star-rating">
+          <span class="star" data-value="1">⭐</span>
+          <span class="star" data-value="2">⭐</span>
+          <span class="star" data-value="3">⭐</span>
+          <span class="star" data-value="4">⭐</span>
+          <span class="star" data-value="5">⭐</span>
+        </div>
+        <input type="hidden" id="selectedRating" value="0">
+        <span class="rating-text" id="ratingText">Select rating</span>
+      </div>
+      <div class="form-group">
+        <label>Your Review</label>
+        <textarea id="reviewText" rows="4" placeholder="Share your experience with us..." required=""></textarea>
+      </div>
+      <button type="button" class="submit-review-btn" onclick="submitReview()">
+        <i class="fas fa-paper-plane"></i> Submit Review
+      </button>
+    </div>
+    <div class="review-success" id="reviewSuccess" style="display: none;">
+      <i class="fas fa-check-circle"></i>
+      <h3>Thank You!</h3>
+      <p>Your review has been submitted successfully.</p>
     </div>
   </div>
 </section>
@@ -2415,6 +3086,22 @@ We deliver all over India! 📦
 const WHATSAPP = '919904873711';
 const ADMIN_PASS = 'ibrahim';
 
+// WhatsApp order button with comment
+document.addEventListener('DOMContentLoaded', function() {
+  const whatsappBtn = document.querySelector('.whatsapp-order-btn');
+  const commentInput = document.getElementById('whatsappComment');
+  if (whatsappBtn && commentInput) {
+    whatsappBtn.addEventListener('click', function(e) {
+      const comment = commentInput.value.trim();
+      if (comment) {
+        const baseMsg = 'Hi! I want to order on WhatsApp';
+        const fullMsg = encodeURIComponent(baseMsg + '\n\nNote: ' + comment);
+        whatsappBtn.href = 'https://wa.me/' + WHATSAPP + '?text=' + fullMsg;
+      }
+    });
+  }
+});
+
 // Clear cached products to reload images
 localStorage.removeItem('kc_products');
 
@@ -2425,7 +3112,7 @@ let products = JSON.parse(localStorage.getItem('kc_products')) || [
     price: 949,
     originalPrice: 1399,
     category: 'girls',
-    image: 'products/949snekers.jpg',
+    image: 'img/949snekers.jpg',
     colors: [{name: 'Purple', hex: '#9b59b6'}, {name: 'Silver White', hex: '#ecf0f1'}, {name: 'Light Pink', hex: '#ffb6c1'}],
     sizes: ['1', '2', '3', '4', '5'],
     sizeNum: {min: 1, max: 5},
@@ -2441,7 +3128,7 @@ let products = JSON.parse(localStorage.getItem('kc_products')) || [
     price: 849,
     originalPrice: 1199,
     category: 'boys',
-    image: 'products/849boys sneakers.jpg',
+    image: 'img/849boys-sneakers.jpg',
     colors: [{name: 'Black', hex: '#2c3e50'}, {name: 'Maroon', hex: '#922b21'}, {name: 'Light Brown', hex: '#d4a574'}],
     sizes: ['1', '2', '3', '4', '5'],
     sizeNum: {min: 1, max: 5},
@@ -2457,7 +3144,7 @@ let products = JSON.parse(localStorage.getItem('kc_products')) || [
     price: 1149,
     originalPrice: 1599,
     category: 'girls',
-    image: 'products/1149girlsshoes.jpg',
+    image: 'img/1149girlsshoes.jpg',
     colors: [{name: 'Purple', hex: '#9b59b6'}, {name: 'Light Pink', hex: '#ffb6c1'}],
     sizes: ['3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
     sizeNum: {min: 3, max: 12},
@@ -2473,7 +3160,7 @@ let products = JSON.parse(localStorage.getItem('kc_products')) || [
     price: 350,
     originalPrice: 499,
     category: 'running-slippers',
-    image: 'products/349sandals.png',
+    image: 'img/349sandals.png',
     colors: [{name: 'Blue', hex: '#3498db'}],
     sizes: ['3', '4', '5', '6', '7', '8', '9', '10'],
     sizeNum: {min: 3, max: 10},
@@ -2489,7 +3176,7 @@ let products = JSON.parse(localStorage.getItem('kc_products')) || [
     price: 399,
     originalPrice: 599,
     category: 'crocs',
-    image: 'products/399crocs.jpg',
+    image: 'img/399crocs.jpg',
     colors: [{name: 'Cream', hex: '#FFFDD0'}, {name: 'Purple', hex: '#9B59B6'}, {name: 'Light Pink', hex: '#FFB6C1'}],
     sizes: ['1', '2', '3', '4', '5', '6', '7', '8'],
     sizeNum: {min: 1, max: 8},
@@ -2505,7 +3192,7 @@ let products = JSON.parse(localStorage.getItem('kc_products')) || [
     price: 349,
     originalPrice: 499,
     category: 'running-slippers',
-    image: 'products/349crocs.png',
+    image: 'img/349crocs.png',
     colors: [{name: 'Yellow', hex: '#FFD700'}, {name: 'Dark Pink', hex: '#C2185B'}],
     sizes: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
     sizeNum: {min: 1, max: 10},
@@ -2569,6 +3256,115 @@ function showBrowserNotification(title, body) {
     new Notification(title, {body, icon: '🛒', badge: '🛒'});
     playNotificationSound();
   }
+}
+
+// REVIEWS - STAR RATING
+document.addEventListener('DOMContentLoaded', () => {
+  const stars = document.querySelectorAll('.star-rating .star');
+
+  stars.forEach((star, index) => {
+    star.addEventListener('click', () => {
+      const selectedRating = star.dataset.value;
+      document.getElementById('selectedRating').value = selectedRating;
+      updateStarDisplay(stars, index);
+      updateRatingText(selectedRating);
+    });
+
+    star.addEventListener('mouseover', () => {
+      highlightStars(stars, index);
+    });
+
+    star.addEventListener('mouseout', () => {
+      resetStars(stars);
+      const rating = document.getElementById('selectedRating').value;
+      if (rating > 0) {
+        updateStarDisplay(stars, rating - 1);
+      }
+    });
+  });
+});
+
+function highlightStars(stars, index) {
+  stars.forEach((star, i) => {
+    if (i <= index) {
+      star.classList.add('active');
+      star.style.opacity = '1';
+    } else {
+      star.classList.remove('active');
+      star.style.opacity = '0.4';
+    }
+  });
+}
+
+function resetStars(stars) {
+  stars.forEach(star => {
+    star.classList.remove('active');
+    star.style.opacity = '0.4';
+  });
+}
+
+function updateStarDisplay(stars, index) {
+  stars.forEach((star, i) => {
+    if (i <= index) {
+      star.classList.add('active');
+      star.style.opacity = '1';
+    } else {
+      star.classList.remove('active');
+      star.style.opacity = '0.4';
+    }
+  });
+}
+
+function updateRatingText(rating) {
+  const ratingText = document.getElementById('ratingText');
+  const texts = ['', 'Poor ⭐', 'Fair ⭐⭐', 'Good ⭐⭐⭐', 'Very Good ⭐⭐⭐⭐', 'Excellent ⭐⭐⭐⭐⭐'];
+  ratingText.textContent = texts[rating] || 'Select rating';
+}
+
+function submitReview() {
+  const name = document.getElementById('reviewName').value.trim();
+  const rating = document.getElementById('selectedRating').value;
+  const text = document.getElementById('reviewText').value.trim();
+
+  if (!name) {
+    showToast('Please enter your name', 'error');
+    return;
+  }
+  if (rating === '0') {
+    showToast('Please select a star rating', 'error');
+    return;
+  }
+  if (!text) {
+    showToast('Please write a review', 'error');
+    return;
+  }
+
+  let reviews = JSON.parse(localStorage.getItem('kc_reviews')) || [];
+
+  const newReview = {
+    name: name,
+    rating: parseInt(rating),
+    text: text,
+    date: new Date().toISOString()
+  };
+
+  reviews.unshift(newReview);
+  localStorage.setItem('kc_reviews', JSON.stringify(reviews));
+
+  document.querySelector('.review-form').style.display = 'none';
+  document.getElementById('reviewSuccess').style.display = 'block';
+
+  setTimeout(() => {
+    document.querySelector('.review-form').style.display = 'block';
+    document.getElementById('reviewSuccess').style.display = 'none';
+    document.getElementById('reviewName').value = '';
+    document.getElementById('reviewText').value = '';
+    document.getElementById('selectedRating').value = '0';
+    resetStars(document.querySelectorAll('.star-rating .star'));
+    document.getElementById('ratingText').textContent = 'Select rating';
+  }, 3000);
+
+  showToast('Thank you for your review!', 'success');
 }
 
 function playNotificationSound() {
@@ -3068,7 +3864,7 @@ function login() {
     document.getElementById('password').value = '';
     document.getElementById('adminSidebar').classList.add('active');
     document.getElementById('adminOverlay').classList.add('active');
-    showToast('Welcome, Ibrahim Narmawala!', 'success');
+    showToast('Welcome, Admin!', 'success');
     addNotification('admin', 'Admin logged in');
   } else {
     showToast('Wrong password!', 'error');
